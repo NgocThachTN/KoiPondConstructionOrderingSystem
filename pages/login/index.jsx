@@ -8,18 +8,18 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import { useRouter } from 'next/router'
 import Link from "next/link";
-
+import axios from 'axios'; // Import axios
 
 const LoginPage = (props) => {
 
     const router = useRouter()
 
-
     const [value, setValue] = useState({
-        email: 'user@gmail.com',
-        password: '123456',
+        email: '',
+        password: '',
         remember: false,
     });
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     const changeHandler = (e) => {
         setValue({...value, [e.target.name]: e.target.value});
@@ -34,32 +34,32 @@ const LoginPage = (props) => {
         className: 'errorMessage'
     }));
 
-
-
-    const submitForm = (e) => {
+    const submitForm = async (e) => {
         e.preventDefault();
         if (validator.allValid()) {
-            setValue({
-                email: '',
-                password: '',
-                remember: false
-                
-            });
-            validator.hideMessages();
+            try {
+                const response = await axios.post('https://reqres.in/api/login', {
+                    email: value.email,
+                    password: value.password
+                });
 
-            const userRegex = /^user+.*/gm;
-            const email = value.email; 
-            
-
-            if (email.match(userRegex)) {
-                toast.success('You successfully Login on Arkio !');
-                router.push('/')
+                if (response.data.token) {
+                    toast.success('You successfully logged in!');
+                    setIsLoggedIn(true);
+                    // Redirect to the user-specific page after login
+                    router.push('/user-home');
+                } else {
+                    toast.error('Login failed!');
+                } 
+            } catch (error) {
+                toast.error('An error occurred during login!');
             }
         } else {
             validator.showMessages();
             toast.error('Empty field is not allowed!');
         }
     };
+
     return (
         <Grid className="loginWrapper">
             <Grid className="loginForm">
@@ -118,7 +118,7 @@ const LoginPage = (props) => {
                                 <Button className="twitter"><i className="fa fa-twitter"></i></Button>
                                 <Button className="linkedin"><i className="fa fa-linkedin"></i></Button>
                             </Grid>
-                            <p className="noteHelp">Don't have an account? <Link href="/register">Create free account</Link>
+                            <p className="noteHelp">Don't have an account? <Link href="/register">Create account</Link>
                             </p>
                         </Grid>
                     </Grid>

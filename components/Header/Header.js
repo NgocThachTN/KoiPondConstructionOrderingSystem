@@ -5,12 +5,12 @@ import MobileMenu from '../MobileMenu/MobileMenu'
 import { totalPrice } from "../../utils";
 import { connect } from "react-redux";
 import { removeFromCart } from "../../store/actions/action";
-
-
+import { useRouter } from 'next/router';
 
 const Header = (props) => {
     const [menuActive, setMenuState] = useState(false);
     const [cartActive, setcartState] = useState(false);
+    const router = useRouter();
 
     const SubmitHandler = (e) => {
         e.preventDefault()
@@ -20,6 +20,10 @@ const Header = (props) => {
         window.scrollTo(10, 0);
     }
     const { carts } = props;
+
+    const handleAvatarClick = () => {
+        router.push('/profile');
+    };
 
     return (
         <header id="header">
@@ -125,6 +129,9 @@ const Header = (props) => {
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div className="user-avatar" onClick={handleAvatarClick} style={{ cursor: 'pointer' }}>
+                                        <Image src="/path/to/avatar.jpg" alt="User Avatar" width={40} height={40} />
                                     </div>
                                 </div>
                             </div>
