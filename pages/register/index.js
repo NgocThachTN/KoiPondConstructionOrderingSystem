@@ -6,6 +6,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { useRouter } from 'next/router'
 import Link from "next/link";
+import axios from 'axios'; // Import axios for API calls
 
 const SignUpPage = (props) => {
 
@@ -16,6 +17,8 @@ const SignUpPage = (props) => {
         full_name: '',
         password: '',
         confirm_password: '',
+        address: '', // Add address field
+        phone: '', // Add phone field
     });
 
     const changeHandler = (e) => {
@@ -27,24 +30,32 @@ const SignUpPage = (props) => {
         className: 'errorMessage'
     }));
 
-
-    const submitForm = (e) => {
+    const submitForm = async (e) => {
         e.preventDefault();
         if (validator.allValid()) {
-            setValue({
-                email: '',
-                full_name: '',
-                password: '',
-                confirm_password: '',
-            });
-            validator.hideMessages();
-            toast.success('Registration Complete successfully!');
-            router.push('/login')
+            try {
+                // Call the .NET API
+                await axios.post('https://your-dotnet-api-endpoint/register', value);
+                setValue({
+                    email: '',
+                    full_name: '',
+                    password: '',
+                    confirm_password: '',
+                    address: '', // Reset address field
+                    phone: '', // Reset phone field
+                });
+                validator.hideMessages();
+                toast.success('Registration Complete successfully!');
+                router.push('/login');
+            } catch (error) {
+                toast.error('Registration failed!');
+            }
         } else {
             validator.showMessages();
             toast.error('Empty field is not allowed!');
         }
     };
+
     return (
         <Grid className="loginWrapper">
 
@@ -109,7 +120,7 @@ const SignUpPage = (props) => {
                                 className="inputOutline"
                                 fullWidth
                                 placeholder="Confirm Password"
-                                value={value.password}
+                                value={value.confirm_password}
                                 variant="outlined"
                                 name="confirm_password"
                                 label="Confirm Password"
@@ -120,6 +131,40 @@ const SignUpPage = (props) => {
                                 onChange={(e) => changeHandler(e)}
                             />
                             {validator.message('confirm password', value.confirm_password, `in:${value.password}`)}
+                        </Grid>
+                        <Grid item xs={12}>
+                            <TextField
+                                className="inputOutline"
+                                fullWidth
+                                placeholder="Address"
+                                value={value.address}
+                                variant="outlined"
+                                name="address"
+                                label="Address"
+                                InputLabelProps={{
+                                    shrink: true,
+                                }}
+                                onBlur={(e) => changeHandler(e)}
+                                onChange={(e) => changeHandler(e)}
+                            />
+                            {validator.message('address', value.address, 'required')}
+                        </Grid>
+                        <Grid item xs={12}>
+                            <TextField
+                                className="inputOutline"
+                                fullWidth
+                                placeholder="Phone"
+                                value={value.phone}
+                                variant="outlined"
+                                name="phone"
+                                label="Phone"
+                                InputLabelProps={{
+                                    shrink: true,
+                                }}
+                                onBlur={(e) => changeHandler(e)}
+                                onChange={(e) => changeHandler(e)}
+                            />
+                            {validator.message('phone', value.phone, 'required|phone')}
                         </Grid>
                         <Grid item xs={12}>
                             <Grid className="formFooter">

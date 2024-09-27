@@ -9,7 +9,7 @@ import About2 from '../../components/about2';
 import TeamSection from '../../components/TeamSection';
 import Testimonial from '../../components/Testimonial';
 import BlogSection from '../../components/BlogSection/BlogSection';
-import Footer from '../../components/footer/Footer';
+import Footer from '../../components/Footer/Footer'; // Updated casing
 
 
 const HomePage2 = (props) => {
