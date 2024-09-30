@@ -1,0 +1,6 @@
+@KoiPondConstructionManagement_HostAddress = http://localhost:5273
+
+GET {{KoiPondConstructionManagement_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
