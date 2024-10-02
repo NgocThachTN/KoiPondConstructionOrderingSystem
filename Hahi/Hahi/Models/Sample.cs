@@ -20,7 +20,6 @@ namespace Hahi.Models
         public string? Size { get; set; }
         [Required]
         public double? Price { get; set; }
-        [Required]
         public byte[]? Image { get; set; }
 
         public virtual ConstructionType? ConstructionType { get; set; }

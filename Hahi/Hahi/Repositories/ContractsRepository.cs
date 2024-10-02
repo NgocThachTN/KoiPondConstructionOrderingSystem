@@ -16,12 +16,16 @@ namespace Hahi.Repositories
 
         public async Task<IEnumerable<Contract>> GetContractsAsync()
         {
-            return await _context.Contracts.ToListAsync();
+            return await _context.Contracts
+                .Include(c => c.Request) // Include Request relationship
+                .ToListAsync();
         }
 
         public async Task<Contract?> GetContractByIdAsync(int id)
         {
-            return await _context.Contracts.FindAsync(id);
+            return await _context.Contracts
+                .Include(c => c.Request) // Include Request relationship
+                .FirstOrDefaultAsync(c => c.ContractId == id);
         }
 
         public async Task AddContractAsync(Contract contract)

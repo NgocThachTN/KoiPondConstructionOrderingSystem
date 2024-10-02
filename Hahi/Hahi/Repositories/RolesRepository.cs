@@ -16,12 +16,16 @@ namespace Hahi.Repositories
 
         public async Task<IEnumerable<Role>> GetRolesAsync()
         {
-            return await _context.Roles.ToListAsync();
+            return await _context.Roles
+                .Include(r => r.Users) // Include Users relationship
+                .ToListAsync();
         }
 
         public async Task<Role?> GetRoleByIdAsync(int id)
         {
-            return await _context.Roles.FindAsync(id);
+            return await _context.Roles
+                .Include(r => r.Users) // Include Users relationship
+                .FirstOrDefaultAsync(r => r.RoleId == id);
         }
 
         public async Task AddRoleAsync(Role role)

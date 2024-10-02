@@ -6,7 +6,7 @@ namespace Hahi.Repositories
 {
     public interface IDesignsRepository
     {
-        Task<IEnumerable<Design>> GetDesignsAsync();
+        Task<List<Design>> GetDesignsAsync();
         Task<Design?> GetDesignByIdAsync(int id);
         Task AddDesignAsync(Design design);
         Task UpdateDesignAsync(Design design);

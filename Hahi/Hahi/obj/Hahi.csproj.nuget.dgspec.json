@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\SWp391\\Hahi\\Hahi\\Hahi.csproj": {}
+    "F:\\GitHubDesktop\\Hahi\\Hahi\\Hahi.csproj": {}
   },
   "projects": {
-    "G:\\SWp391\\Hahi\\Hahi\\Hahi.csproj": {
+    "F:\\GitHubDesktop\\Hahi\\Hahi\\Hahi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\SWp391\\Hahi\\Hahi\\Hahi.csproj",
+        "projectUniqueName": "F:\\GitHubDesktop\\Hahi\\Hahi\\Hahi.csproj",
         "projectName": "Hahi",
-        "projectPath": "G:\\SWp391\\Hahi\\Hahi\\Hahi.csproj",
+        "projectPath": "F:\\GitHubDesktop\\Hahi\\Hahi\\Hahi.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "G:\\SWp391\\Hahi\\Hahi\\obj\\",
+        "outputPath": "F:\\GitHubDesktop\\Hahi\\Hahi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -77,6 +77,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.25, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.16.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

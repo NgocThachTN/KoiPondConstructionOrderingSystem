@@ -6,17 +6,19 @@ namespace Hahi.Models
 {
     public partial class Account
     {
-        [Required]
         public int AccountId { get; set; }
-        [Required]
+
         public string UserName { get; set; }
 
         [Required]
+        [EmailAddress]
         public string Email { get; set; }
 
         [Required]
         public string Password { get; set; }
-        [Required]
-        public virtual User? User { get; set; }
+
+        // Account is linked to one User
+        public virtual User User { get; set; }
     }
+
 }

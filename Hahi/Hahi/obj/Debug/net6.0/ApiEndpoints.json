@@ -21,7 +21,7 @@
   },
   {
     "ContainingType": "Hahi.Controllers.AccountsController",
-    "Method": "PostAccount",
+    "Method": "CreateAccount",
     "RelativePath": "api/Accounts",
     "HttpMethod": "POST",
     "IsController": true,
@@ -29,21 +29,27 @@
     "Parameters": [
       {
         "Name": "account",
-        "Type": "Hahi.Models.Account",
+        "Type": "Hahi.DTOs.CreateAccountRequestDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hahi.Controllers.AccountsController",
+    "Method": "GetAccountById",
+    "RelativePath": "api/Accounts/{AccountId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Type": "Hahi.Models.Account",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "AccountId",
+        "Type": "System.Int32",
+        "IsRequired": true
       }
-    ]
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Hahi.Controllers.AccountsController",
@@ -73,7 +79,7 @@
   },
   {
     "ContainingType": "Hahi.Controllers.AccountsController",
-    "Method": "PutAccount",
+    "Method": "UpdateAccount",
     "RelativePath": "api/Accounts/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -85,8 +91,8 @@
         "IsRequired": true
       },
       {
-        "Name": "account",
-        "Type": "Hahi.Models.Account",
+        "Name": "modelUpdate",
+        "Type": "Hahi.DTOs.UpdateAccountRequestDto",
         "IsRequired": true
       }
     ],

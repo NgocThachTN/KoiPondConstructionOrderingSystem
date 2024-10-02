@@ -3,11 +3,13 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Hahi.Models;
 using Hahi.Repositories;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Hahi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class RequestsController : ControllerBase
     {
         private readonly IRequestsRepository _repository;

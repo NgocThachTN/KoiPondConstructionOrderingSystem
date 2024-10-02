@@ -16,12 +16,18 @@ namespace Hahi.Repositories
 
         public async Task<IEnumerable<ConstructionType>> GetConstructionTypesAsync()
         {
-            return await _context.ConstructionTypes.ToListAsync();
+            return await _context.ConstructionTypes
+                .Include(ct => ct.Designs)
+                .Include(ct => ct.Samples)
+                .ToListAsync();
         }
 
         public async Task<ConstructionType?> GetConstructionTypeByIdAsync(int id)
         {
-            return await _context.ConstructionTypes.FindAsync(id);
+            return await _context.ConstructionTypes
+                .Include(ct => ct.Designs)
+                .Include(ct => ct.Samples)
+                .FirstOrDefaultAsync(ct => ct.ConstructionTypeId == id);
         }
 
         public async Task AddConstructionTypeAsync(ConstructionType constructionType)

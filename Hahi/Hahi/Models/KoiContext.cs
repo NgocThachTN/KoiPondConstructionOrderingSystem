@@ -16,16 +16,16 @@ namespace Hahi.Models
         {
         }
 
-        public virtual DbSet<Account> Accounts { get; set; } = null!;
-        public virtual DbSet<ConstructionType> ConstructionTypes { get; set; } = null!;
-        public virtual DbSet<Contract> Contracts { get; set; } = null!;
-        public virtual DbSet<Design> Designs { get; set; } = null!;
-        public virtual DbSet<Maintenance> Maintenances { get; set; } = null!;
-        public virtual DbSet<MaintenanceRequest> MaintenanceRequests { get; set; } = null!;
-        public virtual DbSet<Request> Requests { get; set; } = null!;
-        public virtual DbSet<Role> Roles { get; set; } = null!;
-        public virtual DbSet<Sample> Samples { get; set; } = null!;
-        public virtual DbSet<User> Users { get; set; } = null!;
+        public virtual DbSet<Account> Accounts { get; set; } 
+        public virtual DbSet<ConstructionType> ConstructionTypes { get; set; } 
+        public virtual DbSet<Contract> Contracts { get; set; } 
+        public virtual DbSet<Design> Designs { get; set; } 
+        public virtual DbSet<Maintenance> Maintenances { get; set; } 
+        public virtual DbSet<MaintenanceRequest> MaintenanceRequests { get; set; } 
+        public virtual DbSet<Request> Requests { get; set; } 
+        public virtual DbSet<Role> Roles { get; set; } 
+        public virtual DbSet<Sample> Samples { get; set; } 
+        public virtual DbSet<User> Users { get; set; } 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

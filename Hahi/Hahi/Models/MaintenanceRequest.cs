@@ -6,7 +6,6 @@ namespace Hahi.Models
 {
     public partial class MaintenanceRequest
     {
-        [Required]
         public int MaintenanceId { get; set; }
         [Required]
         public int RequestId { get; set; }

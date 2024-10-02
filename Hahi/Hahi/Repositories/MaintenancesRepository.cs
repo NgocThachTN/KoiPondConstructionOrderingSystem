@@ -16,12 +16,16 @@ namespace Hahi.Repositories
 
         public async Task<IEnumerable<Maintenance>> GetMaintenancesAsync()
         {
-            return await _context.Maintenances.ToListAsync();
+            return await _context.Maintenances
+                .Include(m => m.MaintenanceRequests) // Include MaintenanceRequests relationship
+                .ToListAsync();
         }
 
         public async Task<Maintenance?> GetMaintenanceByIdAsync(int id)
         {
-            return await _context.Maintenances.FindAsync(id);
+            return await _context.Maintenances
+                .Include(m => m.MaintenanceRequests) // Include MaintenanceRequests relationship
+                .FirstOrDefaultAsync(m => m.MaintenanceId == id);
         }
 
         public async Task AddMaintenanceAsync(Maintenance maintenance)

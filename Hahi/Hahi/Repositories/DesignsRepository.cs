@@ -14,14 +14,18 @@ namespace Hahi.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<Design>> GetDesignsAsync()
+        public async Task<List<Design>> GetDesignsAsync()
         {
-            return await _context.Designs.ToListAsync();
+            return await _context.Designs
+                .Include(d => d.ConstructionType) 
+                .ToListAsync();
         }
 
         public async Task<Design?> GetDesignByIdAsync(int id)
         {
-            return await _context.Designs.FindAsync(id);
+            return await _context.Designs
+                .Include(d => d.ConstructionType) 
+                .FirstOrDefaultAsync(d => d.DesignId == id);
         }
 
         public async Task AddDesignAsync(Design design)

@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("e0598901-9da8-4264-a447-000897d18d49")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Hahi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ff0d852593e2f8d9fdf959a008f2fb803a4da438")]
 [assembly: System.Reflection.AssemblyProductAttribute("Hahi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Hahi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

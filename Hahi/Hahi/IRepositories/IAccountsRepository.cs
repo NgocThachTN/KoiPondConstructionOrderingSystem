@@ -10,7 +10,7 @@ namespace Hahi.Repositories
         Task<Account?> GetAccountByIdAsync(int id);
         Task AddAccountAsync(Account account);
         Task UpdateAccountAsync(Account account);
-        Task DeleteAccountAsync(int id);
+        Task<bool> DeleteAccountAsync(int id);
         Task<bool> AccountExistsAsync(int id);
     }
 }

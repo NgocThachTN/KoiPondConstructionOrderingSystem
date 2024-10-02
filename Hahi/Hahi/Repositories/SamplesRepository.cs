@@ -17,14 +17,16 @@ namespace Hahi.Repositories
         public async Task<IEnumerable<Sample>> GetSamplesAsync()
         {
             return await _context.Samples
-                .Include(s => s.ConstructionType)
+                .Include(s => s.ConstructionType)   // Include ConstructionType liên quan
+                .Include(s => s.Requests)           // Include Requests liên quan
                 .ToListAsync();
         }
 
         public async Task<Sample?> GetSampleByIdAsync(int sampleId)
         {
             return await _context.Samples
-                .Include(s => s.ConstructionType)
+                .Include(s => s.ConstructionType)   // Include ConstructionType liên quan
+                .Include(s => s.Requests)           // Include Requests liên quan
                 .FirstOrDefaultAsync(s => s.SampleId == sampleId);
         }
 

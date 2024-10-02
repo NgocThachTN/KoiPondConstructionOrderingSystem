@@ -42,7 +42,7 @@ public class AuthController : ControllerBase
                     new Claim(ClaimTypes.Name, account.Email),
                     new Claim(ClaimTypes.Role, role)
                 }),
-                Expires = DateTime.UtcNow.AddHours(1),
+                Expires = DateTime.UtcNow.AddDays(7),
                 Audience = "your_audience_here",
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };

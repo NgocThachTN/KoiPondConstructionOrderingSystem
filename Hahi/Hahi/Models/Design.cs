@@ -13,13 +13,16 @@ namespace Hahi.Models
 
         public int DesignId { get; set; }
         public int? ConstructionTypeId { get; set; }
+
         [Required]
         public string? DesignName { get; set; }
+
         [Required]
         public string? Size { get; set; }
+
         [Required]
         public double? Price { get; set; }
-        [Required]
+
         public byte[]? Image { get; set; }
 
         public virtual ConstructionType? ConstructionType { get; set; }

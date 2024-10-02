@@ -12,9 +12,12 @@ namespace Hahi.Models
         }
 
         public int RoleId { get; set; }
-        [Required]
-        public string? RoleName { get; set; }
 
+        [Required]
+        public string RoleName { get; set; }
+
+        // A role can have multiple users
         public virtual ICollection<User> Users { get; set; }
     }
+
 }
