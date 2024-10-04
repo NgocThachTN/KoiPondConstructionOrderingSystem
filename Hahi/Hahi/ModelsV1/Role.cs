@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
-namespace Hahi.Models
+namespace Hahi.ModelsV1
 {
     public partial class Role
     {
@@ -12,12 +11,8 @@ namespace Hahi.Models
         }
 
         public int RoleId { get; set; }
+        public string? RoleName { get; set; }
 
-        [Required]
-        public string RoleName { get; set; }
-
-        // A role can have multiple users
         public virtual ICollection<User> Users { get; set; }
     }
-
 }

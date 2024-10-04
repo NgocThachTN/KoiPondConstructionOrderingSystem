@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Hahi.Models;
+using Hahi.ModelsV1;
 using Hahi.Repositories;
 using Microsoft.AspNetCore.Authorization;
 

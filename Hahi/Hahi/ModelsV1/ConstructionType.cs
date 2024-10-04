@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
-namespace Hahi.Models
+namespace Hahi.ModelsV1
 {
     public partial class ConstructionType
     {
@@ -11,13 +10,11 @@ namespace Hahi.Models
             Designs = new HashSet<Design>();
             Samples = new HashSet<Sample>();
         }
-        [Required]
+
         public int ConstructionTypeId { get; set; }
-        [Required]
-        public string? ConstructionName { get; set; }
-        [Required]
+        public string? ConstructionTypeName { get; set; }
+
         public virtual ICollection<Design> Designs { get; set; }
-        [Required]
         public virtual ICollection<Sample> Samples { get; set; }
     }
 }

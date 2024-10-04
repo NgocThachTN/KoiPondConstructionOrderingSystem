@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
-namespace Hahi.Models
+namespace Hahi.ModelsV1
 {
     public partial class Request
     {
@@ -12,15 +11,10 @@ namespace Hahi.Models
         }
 
         public int RequestId { get; set; }
-        [Required]
         public int? UserId { get; set; }
-        [Required]
         public string? RequestName { get; set; }
-        [Required]
         public string? Description { get; set; }
-        [Required]
         public int? SampleId { get; set; }
-        [Required]
         public int? DesignId { get; set; }
 
         public virtual Design? Design { get; set; }

@@ -3,7 +3,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Hahi.Models;
+using Hahi.ModelsV1;
 using Microsoft.EntityFrameworkCore;
 using Swashbuckle.AspNetCore.Annotations;
 using Swashbuckle.AspNetCore.Filters;
@@ -13,9 +13,9 @@ using Swashbuckle.AspNetCore.Filters;
 [Route("api/[controller]")]
 public class AuthController : ControllerBase
 {
-    private readonly KoiContext _context;
+    private readonly KoisV1Context _context;
 
-    public AuthController(KoiContext context)
+    public AuthController(KoisV1Context context)
     {
         _context = context;
     }
@@ -131,5 +131,5 @@ public class SignupModel
     public string Name { get; set; }
     public string PhoneNumber { get; set; }
     public string Address { get; set; }
-    public int RoleId { get; set; } 
+    public int RoleId { get; set; }
 }

@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Hahi.Models;
+using Hahi.ModelsV1;
 
 namespace Hahi.Repositories
 {
     public class SamplesRepository : ISamplesRepository
     {
-        private readonly KoiContext _context;
+        private readonly KoisV1Context _context;
 
-        public SamplesRepository(KoiContext context)
+        public SamplesRepository(KoisV1Context context)
         {
             _context = context;
         }

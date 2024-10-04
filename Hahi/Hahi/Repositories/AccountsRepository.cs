@@ -1,16 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Hahi.Models;
+using Hahi.ModelsV1;
 using Hahi.Repositories;
 
 namespace Hahi.Repositories
 {
     public class AccountsRepository : IAccountsRepository
     {
-        private readonly KoiContext _context;
+        private readonly KoisV1Context _context;
 
-        public AccountsRepository(KoiContext context)
+        public AccountsRepository(KoisV1Context context)
         {
             _context = context;
         }
@@ -31,7 +31,7 @@ namespace Hahi.Repositories
                         .ThenInclude(r => r.Contract)
                 .Include(a => a.User)
                     .ThenInclude(u => u.Requests)
-                        .ThenInclude(r => r.MaintenanceRequests); 
+                        .ThenInclude(r => r.MaintenanceRequests);
         }
 
         public async Task<Account?> GetAccountByIdAsync(int id)

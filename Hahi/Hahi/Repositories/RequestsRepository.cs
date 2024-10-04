@@ -1,4 +1,5 @@
-﻿using Hahi.Models;
+﻿
+using Hahi.ModelsV1;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -7,9 +8,9 @@ namespace Hahi.Repositories
 {
     public class RequestsRepository : IRequestsRepository
     {
-        private readonly KoiContext _context;
+        private readonly KoisV1Context _context;
 
-        public RequestsRepository(KoiContext context)
+        public RequestsRepository(KoisV1Context context)
         {
             _context = context;
         }

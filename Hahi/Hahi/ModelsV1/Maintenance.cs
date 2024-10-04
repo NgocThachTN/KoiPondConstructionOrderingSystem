@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
-namespace Hahi.Models
+namespace Hahi.ModelsV1
 {
     public partial class Maintenance
     {
@@ -12,7 +11,6 @@ namespace Hahi.Models
         }
 
         public int MaintenanceId { get; set; }
-        [Required]
         public string? MaintencaceName { get; set; }
 
         public virtual ICollection<MaintenanceRequest> MaintenanceRequests { get; set; }

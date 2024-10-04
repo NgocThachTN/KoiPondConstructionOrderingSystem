@@ -1,9 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Hahi.Models;
+using Hahi.ModelsV1;
 using Hahi.Repositories;
 using Microsoft.AspNetCore.Authorization;
+using System.Security.Principal;
+using Hahi.AutoMapper;
+using Hahi.DTOs;
+using Microsoft.EntityFrameworkCore;
 
 namespace Hahi.Controllers
 {
@@ -13,10 +17,12 @@ namespace Hahi.Controllers
     public class ConstructionTypesController : ControllerBase
     {
         private readonly IConstructionTypesRepository _repository;
+        private readonly KoisV1Context _context;
 
-        public ConstructionTypesController(IConstructionTypesRepository repository)
+        public ConstructionTypesController(IConstructionTypesRepository repository, KoisV1Context context)
         {
             _repository = repository;
+            _context = context;
         }
 
         // GET: api/ConstructionTypes
@@ -28,53 +34,98 @@ namespace Hahi.Controllers
         }
 
         // GET: api/ConstructionTypes/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<ConstructionType>> GetConstructionType(int id)
+        [HttpGet("{ConstructionTypeId}")]
+        public async Task<ActionResult<ConstructionType>> GetConstructionTypeById(int ConstructionTypeId)
         {
-            var constructionType = await _repository.GetConstructionTypeByIdAsync(id);
+            var constructionType = await _repository.GetConstructionTypeByIdAsync(ConstructionTypeId);
 
             if (constructionType == null)
             {
-                return NotFound();
-            }
-
-            return Ok(constructionType);
-        }
-
-        // PUT: api/ConstructionTypes/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutConstructionType(int id, ConstructionType constructionType)
-        {
-            if (id != constructionType.ConstructionTypeId)
-            {
-                return BadRequest();
+                return NotFound(new { message = "ConstructionType not found." });
             }
 
             try
             {
-                await _repository.UpdateConstructionTypeAsync(constructionType);
+                return Ok(constructionType.ToConstructionTypeDto());
             }
-            catch
+            catch (InvalidOperationException ex)
             {
-                if (!await _repository.ConstructionTypeExistsAsync(id))
+                return NotFound(new { message = ex.Message }); // Return NotFound if Account is null
+            }
+        }
+
+        // PUT: api/ConstructionTypes/5
+        [HttpPut("{id}")]
+        public IActionResult UpdateConstructionType([FromRoute] int id, [FromBody] UpdateConstructionTypeRequestDto constructionTypeUpdate)
+        {
+            // Fetch ConstructionType including Designs and Samples
+            var constructionTypeModel = _context.ConstructionTypes
+                .Include(ct => ct.Designs)
+                .Include(ct => ct.Samples)
+                .FirstOrDefault(x => x.ConstructionTypeId == id);
+
+            if (constructionTypeModel == null)
+            {
+                return NotFound(new { message = "ConstructionType not found." });
+            }
+
+            // Update the ConstructionType name
+            constructionTypeModel.ConstructionTypeName = constructionTypeUpdate.ConstructionName;
+
+            // Update Designs
+            if (constructionTypeUpdate.Designs != null)
+            {
+                // Clear existing designs if required
+                constructionTypeModel.Designs.Clear();
+
+                foreach (var designDto in constructionTypeUpdate.Designs)
                 {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
+                    constructionTypeModel.Designs.Add(new Design
+                    {
+                        DesignName = designDto.DesignName,
+                        DesignSize = designDto.DesignSize,
+                        DesignPrice = designDto.DesignPrice,
+                        DesignImage = designDto.DesignImage
+                    });
                 }
             }
 
-            return NoContent();
+            // Update Samples
+            if (constructionTypeUpdate.Samples != null)
+            {
+                // Clear existing samples if required
+                constructionTypeModel.Samples.Clear();
+
+                foreach (var sampleDto in constructionTypeUpdate.Samples)
+                {
+                    constructionTypeModel.Samples.Add(new Sample
+                    {
+                        SampleName = sampleDto.SampleName,
+                        SampleSize = sampleDto.SampleSize,
+                        SamplePrice = sampleDto.SamplePrice,
+                        SampleImage = sampleDto.SampleImage
+                    });
+                }
+            }
+
+            // Save changes to the database
+            _context.SaveChanges();
+
+            // Return the updated ConstructionType as a DTO
+            return Ok(constructionTypeModel.ToConstructionTypeDto());
         }
+
 
         // POST: api/ConstructionTypes
         [HttpPost]
-        public async Task<ActionResult<ConstructionType>> PostConstructionType(ConstructionType constructionType)
+        [Authorize(Roles = "Manager")]
+        [HttpPost]
+        public IActionResult CreateConstructionType([FromBody] CreateConstructionTypeRequestDto constructionType)
         {
-            await _repository.AddConstructionTypeAsync(constructionType);
-            return CreatedAtAction(nameof(GetConstructionType), new { id = constructionType.ConstructionTypeId }, constructionType);
+            var constructionTypeModel = constructionType.ToConstructionTypeFromCreatedDto();
+            _context.ConstructionTypes.Add(constructionTypeModel);
+            _context.SaveChanges();
+            return CreatedAtAction(nameof(GetConstructionTypeById), new { ConstructionTypeID = constructionTypeModel.ConstructionTypeId }, constructionTypeModel.ToConstructionTypeDto());
         }
 
         // DELETE: api/ConstructionTypes/5
@@ -87,8 +138,27 @@ namespace Hahi.Controllers
                 return NotFound();
             }
 
-            await _repository.DeleteConstructionTypeAsync(id);
-            return NoContent();
+            // Check if the associated Account exists
+            if (constructionType.Designs == null)
+            {
+                return NotFound(new { message = "Design not found." });
+            }
+
+            if (constructionType.Samples == null)
+            {
+                return NotFound(new { message = "Sample not found." });
+            }
+
+            // Proceed to delete 
+            bool result = await _repository.DeleteConstructionTypeAsync(id);
+
+            if (result)
+            {
+                return Ok(new { message = "ConstructionType deleted successfully." });
+            }
+
+            return BadRequest(new { message = "Failed to delete ConstructionType." });
         }
+
     }
 }

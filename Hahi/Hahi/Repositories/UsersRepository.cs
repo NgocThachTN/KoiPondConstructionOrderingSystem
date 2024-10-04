@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Hahi.Models;
+using Hahi.ModelsV1;
 
 namespace Hahi.Repositories
 {
     public class UsersRepository : IUsersRepository
     {
-        private readonly KoiContext _context;
+        private readonly KoisV1Context _context;
 
-        public UsersRepository(KoiContext context)
+        public UsersRepository(KoisV1Context context)
         {
             _context = context;
         }
@@ -42,14 +42,22 @@ namespace Hahi.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteUserAsync(int id)
+        public async Task<bool> DeleteUserAsync(int id)
         {
+            // Tìm tài khoản theo ID
             var user = await GetUserByIdAsync(id);
-            if (user != null)
+
+            // Nếu tài khoản không tồn tại, trả về false
+            if (user == null)
             {
-                _context.Users.Remove(user);
-                await _context.SaveChangesAsync();
+                return false;
             }
+
+            // Tiến hành xóa tài khoản và lưu thay đổi
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
+
+            return true;
         }
 
         public async Task<bool> UserExistsAsync(int id)

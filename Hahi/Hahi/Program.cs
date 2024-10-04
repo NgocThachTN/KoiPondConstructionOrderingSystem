@@ -1,5 +1,4 @@
-using Hahi.Models;
-using Hahi.Repositories;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -7,6 +6,9 @@ using System.Text;
 using System.Text.Json.Serialization;
 using Swashbuckle.AspNetCore.Filters;
 using Microsoft.AspNetCore.Hosting;
+using Hahi.ModelsV1;
+using Hahi.Repositories;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -61,7 +63,7 @@ builder.Services.AddCors(options => options.AddDefaultPolicy(policy =>
 builder.Services.AddSwaggerExamplesFromAssemblyOf<Program>();
 
 // Configure DbContext with the connection string from appsettings.json
-builder.Services.AddDbContext<KoiContext>(options =>
+builder.Services.AddDbContext<KoisV1Context>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DBStore"));
 });

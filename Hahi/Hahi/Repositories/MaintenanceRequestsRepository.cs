@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Hahi.Models;
+using Hahi.ModelsV1;
 
 namespace Hahi.Repositories
 {
     public class MaintenanceRequestsRepository : IMaintenanceRequestsRepository
     {
-        private readonly KoiContext _context;
+        private readonly KoisV1Context _context;
 
-        public MaintenanceRequestsRepository(KoiContext context)
+        public MaintenanceRequestsRepository(KoisV1Context context)
         {
             _context = context;
         }
@@ -17,7 +17,7 @@ namespace Hahi.Repositories
         public async Task<IEnumerable<MaintenanceRequest>> GetMaintenanceRequestsAsync()
         {
             return await _context.MaintenanceRequests
-                .Include(mr => mr.Maintenance)
+                .Include(mr => mr.MaintenanceRequestNavigation) // Use the correct navigation property
                 .Include(mr => mr.Request)
                 .ToListAsync();
         }
@@ -25,10 +25,11 @@ namespace Hahi.Repositories
         public async Task<MaintenanceRequest?> GetMaintenanceRequestByIdAsync(int maintenanceId, int requestId)
         {
             return await _context.MaintenanceRequests
-                .Include(mr => mr.Maintenance)
+                .Include(mr => mr.MaintenanceRequestNavigation) // Use the correct navigation property
                 .Include(mr => mr.Request)
-                .FirstOrDefaultAsync(mr => mr.MaintenanceId == maintenanceId && mr.RequestId == requestId);
+                .FirstOrDefaultAsync(mr => mr.MaintenanceRequestId == maintenanceId && mr.RequestId == requestId);
         }
+
 
         public async Task AddMaintenanceRequestAsync(MaintenanceRequest maintenanceRequest)
         {
@@ -55,7 +56,7 @@ namespace Hahi.Repositories
         public async Task<bool> MaintenanceRequestExistsAsync(int maintenanceId, int requestId)
         {
             return await _context.MaintenanceRequests
-                .AnyAsync(mr => mr.MaintenanceId == maintenanceId && mr.RequestId == requestId);
+                .AnyAsync(mr => mr.MaintenanceRequestId == maintenanceId && mr.RequestId == requestId);
         }
     }
 }

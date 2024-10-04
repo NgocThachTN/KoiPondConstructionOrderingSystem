@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Hahi.Models;
+using Hahi.ModelsV1;
 using Hahi.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
@@ -18,9 +18,9 @@ namespace Hahi.Controllers
     public class AccountsController : ControllerBase
     {
         private readonly IAccountsRepository _repository;
-        private readonly KoiContext _context;
+        private readonly KoisV1Context _context;
 
-        public AccountsController(IAccountsRepository repository, KoiContext context)
+        public AccountsController(IAccountsRepository repository, KoisV1Context context)
         {
             _context = context;
             _repository = repository;
@@ -33,48 +33,65 @@ namespace Hahi.Controllers
             var accounts = await _repository.GetAccounts().ToListAsync();
             return Ok(accounts);
         }
-        [HttpGet("{AccountId}")]
-        public IActionResult GetAccountById([FromRoute] int AccountId)
-        {
-            var account = _context.Accounts.FindAsync(AccountId);
-            if (account == null)
-            {
-                return BadRequest();
-            }
-            return Ok(account);
-        }
+
 
         // GET: api/Accounts/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Account>> GetAccount(int id)
+        [HttpGet("{AccountId}")]
+        public async Task<ActionResult<Account>> GetAccountById(int AccountId)
         {
-            var account = await _repository.GetAccountByIdAsync(id);
+            var account = await _repository.GetAccountByIdAsync(AccountId);
 
             if (account == null)
             {
-                return NotFound();
+                return NotFound(new { message = "Account not found." });
             }
 
-            return Ok(account.ToAccountDto());
+            try
+            {
+                return Ok(account.ToAccountDto());
+            }
+            catch (InvalidOperationException ex)
+            {
+                return NotFound(new { message = ex.Message }); // Return NotFound if Account is null
+            }
         }
 
         // PUT: api/Accounts/5
-        [HttpPut]
-        [Route("{id}")]
+        [HttpPut("{id}")]
         public IActionResult UpdateAccount([FromRoute] int id, [FromBody] UpdateAccountRequestDto modelUpdate)
         {
-            var accountModel = _context.Accounts.FirstOrDefault(x => x.AccountId == id);
+            // Include the User entity when fetching the Account
+            var accountModel = _context.Accounts.Include(a => a.User).FirstOrDefault(x => x.AccountId == id);
+
             if (accountModel == null)
             {
                 return NotFound();
             }
+
+            // Check if User is null and initialize it if necessary
+            if (accountModel.User == null)
+            {
+                accountModel.User = new User(); // Initialize the User entity if it's null
+            }
+
+            // Update account and user details
             accountModel.UserName = modelUpdate.UserName;
             accountModel.Email = modelUpdate.Email;
             accountModel.Password = modelUpdate.Password;
+            accountModel.User.Name = modelUpdate.Name;
+            accountModel.User.PhoneNumber = modelUpdate.PhoneNumber;
+            accountModel.User.Address = modelUpdate.Address;
+            accountModel.User.RoleId = modelUpdate.RoleId;
+
+            // Save changes to the database
             _context.SaveChanges();
 
+            // Return the updated account as a DTO
             return Ok(accountModel.ToAccountDto());
         }
+
+
+
 
         // POST: api/Accounts
         [HttpPost]

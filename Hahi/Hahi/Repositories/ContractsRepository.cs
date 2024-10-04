@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Hahi.Models;
+using Hahi.ModelsV1;
 
 namespace Hahi.Repositories
 {
     public class ContractsRepository : IContractsRepository
     {
-        private readonly KoiContext _context;
+        private readonly KoisV1Context _context;
 
-        public ContractsRepository(KoiContext context)
+        public ContractsRepository(KoisV1Context context)
         {
             _context = context;
         }
@@ -17,7 +17,7 @@ namespace Hahi.Repositories
         public async Task<IEnumerable<Contract>> GetContractsAsync()
         {
             return await _context.Contracts
-                .Include(c => c.Request) // Include Request relationship
+                .Include(c => c.Request)
                 .ToListAsync();
         }
 

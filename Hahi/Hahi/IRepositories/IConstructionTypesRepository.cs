@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Hahi.Models;
+using Hahi.ModelsV1;
 
 namespace Hahi.Repositories
 {
@@ -10,7 +10,7 @@ namespace Hahi.Repositories
         Task<ConstructionType?> GetConstructionTypeByIdAsync(int id);
         Task AddConstructionTypeAsync(ConstructionType constructionType);
         Task UpdateConstructionTypeAsync(ConstructionType constructionType);
-        Task DeleteConstructionTypeAsync(int id);
+        Task<bool> DeleteConstructionTypeAsync(int id);
         Task<bool> ConstructionTypeExistsAsync(int id);
     }
 }

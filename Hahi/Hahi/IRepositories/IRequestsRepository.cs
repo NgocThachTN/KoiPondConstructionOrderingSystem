@@ -1,4 +1,4 @@
-﻿using Hahi.Models;
+﻿using Hahi.ModelsV1;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

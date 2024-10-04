@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Hahi.Models;
+using Hahi.ModelsV1;
 
 namespace Hahi.Repositories
 {
@@ -10,7 +10,7 @@ namespace Hahi.Repositories
         Task<User?> GetUserByIdAsync(int id);
         Task AddUserAsync(User user);
         Task UpdateUserAsync(User user);
-        Task DeleteUserAsync(int id);
+        Task<bool> DeleteUserAsync(int id);
         Task<bool> UserExistsAsync(int id);
     }
 }

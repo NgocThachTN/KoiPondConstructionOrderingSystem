@@ -3,36 +3,36 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace Hahi.Models
+namespace Hahi.ModelsV1
 {
-    public partial class KoiContext : DbContext
+    public partial class KoisV1Context : DbContext
     {
-        public KoiContext()
+        public KoisV1Context()
         {
         }
 
-        public KoiContext(DbContextOptions<KoiContext> options)
+        public KoisV1Context(DbContextOptions<KoisV1Context> options)
             : base(options)
         {
         }
 
-        public virtual DbSet<Account> Accounts { get; set; } 
-        public virtual DbSet<ConstructionType> ConstructionTypes { get; set; } 
-        public virtual DbSet<Contract> Contracts { get; set; } 
-        public virtual DbSet<Design> Designs { get; set; } 
-        public virtual DbSet<Maintenance> Maintenances { get; set; } 
-        public virtual DbSet<MaintenanceRequest> MaintenanceRequests { get; set; } 
-        public virtual DbSet<Request> Requests { get; set; } 
-        public virtual DbSet<Role> Roles { get; set; } 
-        public virtual DbSet<Sample> Samples { get; set; } 
-        public virtual DbSet<User> Users { get; set; } 
+        public virtual DbSet<Account> Accounts { get; set; } = null!;
+        public virtual DbSet<ConstructionType> ConstructionTypes { get; set; } = null!;
+        public virtual DbSet<Contract> Contracts { get; set; } = null!;
+        public virtual DbSet<Design> Designs { get; set; } = null!;
+        public virtual DbSet<Maintenance> Maintenances { get; set; } = null!;
+        public virtual DbSet<MaintenanceRequest> MaintenanceRequests { get; set; } = null!;
+        public virtual DbSet<Request> Requests { get; set; } = null!;
+        public virtual DbSet<Role> Roles { get; set; } = null!;
+        public virtual DbSet<Sample> Samples { get; set; } = null!;
+        public virtual DbSet<User> Users { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=(local);Uid=sa;Pwd=12345;Database=Koi;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=(local);Uid=sa;Pwd=12345;Database=KoisV1;Trusted_Connection=True;");
             }
         }
 
@@ -63,7 +63,7 @@ namespace Hahi.Models
 
                 entity.Property(e => e.ConstructionTypeId).HasColumnName("ConstructionTypeID");
 
-                entity.Property(e => e.ConstructionName)
+                entity.Property(e => e.ConstructionTypeName)
                     .HasMaxLength(255)
                     .IsUnicode(false);
             });
@@ -72,24 +72,24 @@ namespace Hahi.Models
             {
                 entity.ToTable("Contract");
 
-                entity.HasIndex(e => e.RequestId, "UQ__Contract__33A8519B462844DD")
+                entity.HasIndex(e => e.RequestId, "UQ__Contract__33A8519B6561141D")
                     .IsUnique();
 
                 entity.Property(e => e.ContractId).HasColumnName("ContractID");
+
+                entity.Property(e => e.ContractEndDate).HasColumnType("datetime");
 
                 entity.Property(e => e.ContractName)
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
+                entity.Property(e => e.ContractStartDate).HasColumnType("datetime");
+
                 entity.Property(e => e.Description)
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
-                entity.Property(e => e.EndDate).HasColumnType("datetime");
-
                 entity.Property(e => e.RequestId).HasColumnName("RequestID");
-
-                entity.Property(e => e.StartDate).HasColumnType("datetime");
 
                 entity.Property(e => e.Status)
                     .HasMaxLength(255)
@@ -109,11 +109,13 @@ namespace Hahi.Models
 
                 entity.Property(e => e.ConstructionTypeId).HasColumnName("ConstructionTypeID");
 
+                entity.Property(e => e.DesignImage).IsUnicode(false);
+
                 entity.Property(e => e.DesignName)
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Size)
+                entity.Property(e => e.DesignSize)
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
@@ -136,26 +138,30 @@ namespace Hahi.Models
 
             modelBuilder.Entity<MaintenanceRequest>(entity =>
             {
-                entity.HasKey(e => new { e.MaintenanceId, e.RequestId })
-                    .HasName("PK__Maintena__553FC7ACE31E31CA");
+                entity.HasKey(e => new { e.MaintenanceRequestId, e.RequestId })
+                    .HasName("PK__Maintena__F3E230DB0DE78748");
 
                 entity.ToTable("Maintenance_Request");
 
-                entity.Property(e => e.MaintenanceId).HasColumnName("MaintenanceID");
+                entity.Property(e => e.MaintenanceRequestId).HasColumnName("Maintenance_RequestID");
 
                 entity.Property(e => e.RequestId).HasColumnName("RequestID");
 
-                entity.Property(e => e.EndDate).HasColumnType("datetime");
+                entity.Property(e => e.MaintenanceRequestEndDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("Maintenance_RequestEndDate");
 
-                entity.Property(e => e.StartDate).HasColumnType("datetime");
+                entity.Property(e => e.MaintenanceRequestStartDate)
+                    .HasColumnType("datetime")
+                    .HasColumnName("Maintenance_RequestStartDate");
 
                 entity.Property(e => e.Status)
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
-                entity.HasOne(d => d.Maintenance)
+                entity.HasOne(d => d.MaintenanceRequestNavigation)
                     .WithMany(p => p.MaintenanceRequests)
-                    .HasForeignKey(d => d.MaintenanceId)
+                    .HasForeignKey(d => d.MaintenanceRequestId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Maintenan__Maint__2B3F6F97");
 
@@ -219,11 +225,13 @@ namespace Hahi.Models
 
                 entity.Property(e => e.ConstructionTypeId).HasColumnName("ConstructionTypeID");
 
+                entity.Property(e => e.SampleImage).IsUnicode(false);
+
                 entity.Property(e => e.SampleName)
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Size)
+                entity.Property(e => e.SampleSize)
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
@@ -235,7 +243,7 @@ namespace Hahi.Models
 
             modelBuilder.Entity<User>(entity =>
             {
-                entity.HasIndex(e => e.AccountId, "UQ__Users__349DA587852612D2")
+                entity.HasIndex(e => e.AccountId, "UQ__Users__349DA587BDFDA612")
                     .IsUnique();
 
                 entity.Property(e => e.UserId).HasColumnName("UserID");

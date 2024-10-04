@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Hahi.Models;
+using Hahi.ModelsV1;
 using Hahi.Repositories;
 using Microsoft.AspNetCore.Authorization;
 
@@ -45,7 +45,7 @@ namespace Hahi.Controllers
         [HttpPut("{maintenanceId}/{requestId}")]
         public async Task<IActionResult> PutMaintenanceRequest(int maintenanceId, int requestId, MaintenanceRequest maintenanceRequest)
         {
-            if (maintenanceId != maintenanceRequest.MaintenanceId || requestId != maintenanceRequest.RequestId)
+            if (maintenanceId != maintenanceRequest.MaintenanceRequestId || requestId != maintenanceRequest.RequestId)
             {
                 return BadRequest();
             }
@@ -74,7 +74,7 @@ namespace Hahi.Controllers
         public async Task<ActionResult<MaintenanceRequest>> PostMaintenanceRequest(MaintenanceRequest maintenanceRequest)
         {
             await _repository.AddMaintenanceRequestAsync(maintenanceRequest);
-            return CreatedAtAction(nameof(GetMaintenanceRequest), new { maintenanceId = maintenanceRequest.MaintenanceId, requestId = maintenanceRequest.RequestId }, maintenanceRequest);
+            return CreatedAtAction(nameof(GetMaintenanceRequest), new { maintenanceRequestId = maintenanceRequest.MaintenanceRequestId, requestId = maintenanceRequest.RequestId }, maintenanceRequest);
         }
 
         // DELETE: api/MaintenanceRequests/5/5

@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using Hahi.Models;
+using Hahi.ModelsV1;
 
 namespace Hahi.Repositories
 {
     public class DesignsRepository : IDesignsRepository
     {
-        private readonly KoiContext _context;
+        private readonly KoisV1Context _context;
 
-        public DesignsRepository(KoiContext context)
+        public DesignsRepository(KoisV1Context context)
         {
             _context = context;
         }
@@ -17,14 +17,14 @@ namespace Hahi.Repositories
         public async Task<List<Design>> GetDesignsAsync()
         {
             return await _context.Designs
-                .Include(d => d.ConstructionType) 
+                .Include(d => d.ConstructionType)
                 .ToListAsync();
         }
 
         public async Task<Design?> GetDesignByIdAsync(int id)
         {
             return await _context.Designs
-                .Include(d => d.ConstructionType) 
+                .Include(d => d.ConstructionType)
                 .FirstOrDefaultAsync(d => d.DesignId == id);
         }
 
@@ -40,14 +40,19 @@ namespace Hahi.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteDesignAsync(int id)
+        public async Task<bool> DeleteDesignAsync(int id)
         {
             var design = await GetDesignByIdAsync(id);
-            if (design != null)
+            if (design == null)
             {
-                _context.Designs.Remove(design);
-                await _context.SaveChangesAsync();
+                return false;
             }
+
+            // Tiến hành xóa tài khoản và lưu thay đổi
+            _context.Designs.Remove(design);
+            await _context.SaveChangesAsync();
+
+            return true;
         }
 
         public async Task<bool> DesignExistsAsync(int id)
