@@ -29,7 +29,8 @@ namespace Hahi.Controllers
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
             var users = await _repository.GetUsersAsync();
-            return Ok(users);
+            var requestDtos = users.Select(user => user.ToUserDto()).ToList(); // Using RequestMapper
+            return Ok(requestDtos);
         }
 
         // GET: api/Users/5

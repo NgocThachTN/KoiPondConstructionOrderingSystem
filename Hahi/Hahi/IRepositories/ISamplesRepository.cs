@@ -10,7 +10,7 @@ namespace Hahi.Repositories
         Task<Sample?> GetSampleByIdAsync(int sampleId);
         Task AddSampleAsync(Sample sample);
         Task UpdateSampleAsync(Sample sample);
-        Task DeleteSampleAsync(int sampleId);
+        Task<bool> DeleteSampleAsync(int sampleId);
         Task<bool> SampleExistsAsync(int sampleId);
     }
 }

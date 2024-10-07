@@ -10,7 +10,7 @@ namespace Hahi.Repositories
         Task<Request> GetRequestByIdAsync(int id);
         Task AddRequestAsync(Request request);
         Task UpdateRequestAsync(Request request);
-        Task DeleteRequestAsync(int id);
+        Task<bool> DeleteRequestAsync(int id);
         Task<bool> RequestExistsAsync(int id);
     }
 }

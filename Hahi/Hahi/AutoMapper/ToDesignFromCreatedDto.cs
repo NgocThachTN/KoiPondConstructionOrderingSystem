@@ -36,6 +36,5 @@ namespace Hahi.AutoMapper
 
             return design;
         }
-
     }
 }

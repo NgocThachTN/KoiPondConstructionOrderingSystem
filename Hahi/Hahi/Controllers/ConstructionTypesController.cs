@@ -30,7 +30,8 @@ namespace Hahi.Controllers
         public async Task<ActionResult<IEnumerable<ConstructionType>>> GetConstructionTypes()
         {
             var constructionTypes = await _repository.GetConstructionTypesAsync();
-            return Ok(constructionTypes);
+            var requestDtos = constructionTypes.Select(constructionType => constructionType.ToConstructionTypeDto()).ToList(); // Using RequestMapper
+            return Ok(requestDtos);
         }
 
         // GET: api/ConstructionTypes/5

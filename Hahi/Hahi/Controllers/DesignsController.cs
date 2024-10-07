@@ -29,7 +29,8 @@ namespace Hahi.Controllers
         public async Task<ActionResult<IEnumerable<Design>>> GetDesigns()
         {
             var designs = await _repository.GetDesignsAsync();
-            return Ok(designs);
+            var requestDtos = designs.Select(design => design.ToDesignDto()).ToList(); // Using RequestMapper
+            return Ok(requestDtos);
         }
 
         // GET: api/Designs/5

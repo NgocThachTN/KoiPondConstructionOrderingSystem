@@ -31,7 +31,8 @@ namespace Hahi.Controllers
         public async Task<ActionResult<IEnumerable<Account>>> GetAccounts()
         {
             var accounts = await _repository.GetAccounts().ToListAsync();
-            return Ok(accounts);
+            var requestDtos = accounts.Select(account => account.ToAccountDto()).ToList(); // Using RequestMapper
+            return Ok(requestDtos);
         }
 
 

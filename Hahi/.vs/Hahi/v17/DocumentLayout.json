@@ -3,6 +3,186 @@
   "WorkspaceRootPath": "F:\\GitHubDesktop\\Hahi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\controllers\\samplescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\controllers\\samplescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\controllers\\requestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\controllers\\requestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\controllers\\maintenancerequestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\controllers\\maintenancerequestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\controllers\\designscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\controllers\\designscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\controllers\\contractscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\controllers\\contractscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\automapper\\todesignfromcreateddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\automapper\\todesignfromcreateddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\controllers\\constructiontypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\controllers\\constructiontypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\automapper\\toconstructiontypefromcreateddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\automapper\\toconstructiontypefromcreateddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\automapper\\toaccountfromcreateddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\automapper\\toaccountfromcreateddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\createcontractdesigndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\createcontractdesigndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\constructiontypedtov1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\constructiontypedtov1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\constructiontypedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\constructiontypedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\contractdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\contractdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\createrequestdesigndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\createrequestdesigndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\controllers\\maintenancescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\controllers\\maintenancescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\userdtov1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\userdtov1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\modelsv1\\koisv1context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\modelsv1\\koisv1context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\updatecontractsampledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\updatecontractsampledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\updatedesignrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\updatedesignrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\updatecontractdesigndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\updatecontractdesigndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\automapper\\torequestfromcreateddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\automapper\\torequestfromcreateddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\updaterequestsampledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\updaterequestsampledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\updaterequestdesigndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\updaterequestdesigndto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\repositories\\contractsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\repositories\\contractsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\automapper\\tosamplefromcreateddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\automapper\\tosamplefromcreateddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\automapper\\touserfromcreateddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\automapper\\touserfromcreateddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\createdesignrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\createdesignrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\repositories\\requestsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\repositories\\requestsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\irepositories\\irequestsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\irepositories\\irequestsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\updatesamplerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\updatesamplerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\createsamplerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\createsamplerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\modelsv1\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\modelsv1\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\updateuserrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\updateuserrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\designdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\designdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\createuserrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\createuserrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\repositories\\samplesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\repositories\\samplesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\sampledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\sampledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\irepositories\\isamplesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\irepositories\\isamplesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\repositories\\designsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\repositories\\designsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,104 +191,24 @@
       "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\repositories\\constructiontypesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\controllers\\designscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\controllers\\designscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\irepositories\\idesignsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\irepositories\\idesignsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\controllers\\constructiontypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\controllers\\constructiontypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\irepositories\\iconstructiontypesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\irepositories\\iconstructiontypesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\constructiontypedtov1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\constructiontypedtov1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\updatedesignrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\updatedesignrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\controllers\\contractscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\controllers\\contractscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\automapper\\todesignfromcreateddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\automapper\\todesignfromcreateddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\automapper\\toconstructiontypefromcreateddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\automapper\\toconstructiontypefromcreateddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\constructiontypedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\constructiontypedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\createconstructiontyperequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\createconstructiontyperequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\modelsv1\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\modelsv1\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\modelsv1\\koisv1context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\modelsv1\\koisv1context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\createdesignrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\createdesignrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\automapper\\toaccountfromcreateddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\automapper\\toaccountfromcreateddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\designdtov1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\designdtov1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\automapper\\touserfromcreateddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\automapper\\touserfromcreateddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\createaccountrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\createaccountrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\designdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\designdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\sampledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\sampledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\repositories\\maintenancerequestsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\repositories\\maintenancerequestsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\controllers\\maintenancerequestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\controllers\\maintenancerequestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\controllers\\maintenancescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\controllers\\maintenancescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\repositories\\maintenancesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -119,72 +219,20 @@
       "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\irepositories\\imaintenancerequestsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\controllers\\requestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\controllers\\requestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\controllers\\samplescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\controllers\\samplescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\updateuserrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\updateuserrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\createuserrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\createuserrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dtos\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\dtos\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\repositories\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\repositories\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\repositories\\samplesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\repositories\\samplesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\repositories\\rolesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\repositories\\rolesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\repositories\\requestsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\repositories\\requestsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\irepositories\\iusersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\irepositories\\iusersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\irepositories\\isamplesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\irepositories\\isamplesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\irepositories\\irolesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\irepositories\\irolesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\irepositories\\irequestsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\irepositories\\irequestsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\repositories\\contractsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\repositories\\contractsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\repositories\\accountsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -195,20 +243,8 @@
       "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\irepositories\\imaintenancesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\irepositories\\icontractsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\irepositories\\icontractsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\irepositories\\iaccountsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\irepositories\\iaccountsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|solutionrelative:hahi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F9F92941-476D-4B6D-8D3D-A9E4FBE3B56F}|Hahi\\Hahi.csproj|f:\\githubdesktop\\hahi\\hahi\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -226,7 +262,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 232,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -250,117 +286,120 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "DesignsController.cs",
               "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\DesignsController.cs",
               "RelativeDocumentMoniker": "Hahi\\Controllers\\DesignsController.cs",
               "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\DesignsController.cs",
               "RelativeToolTip": "Hahi\\Controllers\\DesignsController.cs",
-              "ViewState": "AgIAAHQAAAAAAAAAAADwv4YAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAkwB8AAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-27T03:59:29.424Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
+              "Title": "ContractsController.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\ContractsController.cs",
+              "RelativeDocumentMoniker": "Hahi\\Controllers\\ContractsController.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\ContractsController.cs",
+              "RelativeToolTip": "Hahi\\Controllers\\ContractsController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAQwCAAAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T09:32:24.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MaintenanceRequestsController.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\MaintenanceRequestsController.cs",
+              "RelativeDocumentMoniker": "Hahi\\Controllers\\MaintenanceRequestsController.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\MaintenanceRequestsController.cs",
+              "RelativeToolTip": "Hahi\\Controllers\\MaintenanceRequestsController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAC8AAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T05:28:00.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RequestsController.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\RequestsController.cs",
+              "RelativeDocumentMoniker": "Hahi\\Controllers\\RequestsController.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\RequestsController.cs",
+              "RelativeToolTip": "Hahi\\Controllers\\RequestsController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAgwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T08:52:17.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Hahi\\Controllers\\UsersController.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Hahi\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T08:52:04.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SamplesController.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\SamplesController.cs",
+              "RelativeDocumentMoniker": "Hahi\\Controllers\\SamplesController.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\SamplesController.cs",
+              "RelativeToolTip": "Hahi\\Controllers\\SamplesController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAYwB8AAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T05:30:23.451Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ToDesignFromCreatedDto.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\AutoMapper\\ToDesignFromCreatedDto.cs",
+              "RelativeDocumentMoniker": "Hahi\\AutoMapper\\ToDesignFromCreatedDto.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\AutoMapper\\ToDesignFromCreatedDto.cs",
+              "RelativeToolTip": "Hahi\\AutoMapper\\ToDesignFromCreatedDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T03:15:21.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ConstructionTypesController.cs",
               "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\ConstructionTypesController.cs",
               "RelativeDocumentMoniker": "Hahi\\Controllers\\ConstructionTypesController.cs",
               "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\ConstructionTypesController.cs",
               "RelativeToolTip": "Hahi\\Controllers\\ConstructionTypesController.cs",
-              "ViewState": "AgIAAIgAAAAAAAAAAAAAAJIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-26T09:05:59.834Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IDesignsRepository.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IDesignsRepository.cs",
-              "RelativeDocumentMoniker": "Hahi\\IRepositories\\IDesignsRepository.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IDesignsRepository.cs",
-              "RelativeToolTip": "Hahi\\IRepositories\\IDesignsRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T03:58:34.248Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DesignsRepository.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\DesignsRepository.cs",
-              "RelativeDocumentMoniker": "Hahi\\Repositories\\DesignsRepository.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\DesignsRepository.cs",
-              "RelativeToolTip": "Hahi\\Repositories\\DesignsRepository.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAYwCgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T03:58:59.763Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ConstructionTypesRepository.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\ConstructionTypesRepository.cs",
-              "RelativeDocumentMoniker": "Hahi\\Repositories\\ConstructionTypesRepository.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\ConstructionTypesRepository.cs",
-              "RelativeToolTip": "Hahi\\Repositories\\ConstructionTypesRepository.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T09:05:26.649Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IConstructionTypesRepository.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IConstructionTypesRepository.cs",
-              "RelativeDocumentMoniker": "Hahi\\IRepositories\\IConstructionTypesRepository.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IConstructionTypesRepository.cs",
-              "RelativeToolTip": "Hahi\\IRepositories\\IConstructionTypesRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T09:05:03.034Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ConstructionTypeDtoV1.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\ConstructionTypeDtoV1.cs",
-              "RelativeDocumentMoniker": "Hahi\\DTOs\\ConstructionTypeDtoV1.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\ConstructionTypeDtoV1.cs",
-              "RelativeToolTip": "Hahi\\DTOs\\ConstructionTypeDtoV1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T03:12:27.135Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UpdateDesignRequestDto.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\UpdateDesignRequestDto.cs",
-              "RelativeDocumentMoniker": "Hahi\\DTOs\\UpdateDesignRequestDto.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\UpdateDesignRequestDto.cs",
-              "RelativeToolTip": "Hahi\\DTOs\\UpdateDesignRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T03:14:35.025Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "ContractsController.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\ContractsController.cs",
-              "RelativeDocumentMoniker": "Hahi\\Controllers\\ContractsController.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\ContractsController.cs",
-              "RelativeToolTip": "Hahi\\Controllers\\ContractsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAATAAAAAAAAAA==",
+              "Title": "ToConstructionTypeFromCreatedDto.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\AutoMapper\\ToConstructionTypeFromCreatedDto.cs",
+              "RelativeDocumentMoniker": "Hahi\\AutoMapper\\ToConstructionTypeFromCreatedDto.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\AutoMapper\\ToConstructionTypeFromCreatedDto.cs",
+              "RelativeToolTip": "Hahi\\AutoMapper\\ToConstructionTypeFromCreatedDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T09:32:24.14Z"
+              "WhenOpened": "2024-10-03T03:58:01.275Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -370,37 +409,79 @@
               "RelativeDocumentMoniker": "Hahi\\Controllers\\AccountsController.cs",
               "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\AccountsController.cs",
               "RelativeToolTip": "Hahi\\Controllers\\AccountsController.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAAwCcAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAmwCEAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T08:44:50.561Z"
+              "WhenOpened": "2024-09-26T08:44:50.561Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "ToDesignFromCreatedDto.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\AutoMapper\\ToDesignFromCreatedDto.cs",
-              "RelativeDocumentMoniker": "Hahi\\AutoMapper\\ToDesignFromCreatedDto.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\AutoMapper\\ToDesignFromCreatedDto.cs",
-              "RelativeToolTip": "Hahi\\AutoMapper\\ToDesignFromCreatedDto.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAiwAcAAAAtAAAAAAAAAA==",
+              "Title": "ToAccountFromCreatedDto.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\AutoMapper\\ToAccountFromCreatedDto.cs",
+              "RelativeDocumentMoniker": "Hahi\\AutoMapper\\ToAccountFromCreatedDto.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\AutoMapper\\ToAccountFromCreatedDto.cs",
+              "RelativeToolTip": "Hahi\\AutoMapper\\ToAccountFromCreatedDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T03:15:21.736Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ToConstructionTypeFromCreatedDto.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\AutoMapper\\ToConstructionTypeFromCreatedDto.cs",
-              "RelativeDocumentMoniker": "Hahi\\AutoMapper\\ToConstructionTypeFromCreatedDto.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\AutoMapper\\ToConstructionTypeFromCreatedDto.cs",
-              "RelativeToolTip": "Hahi\\AutoMapper\\ToConstructionTypeFromCreatedDto.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAuwAkAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T03:58:01.275Z"
+              "WhenOpened": "2024-10-03T11:42:12.443Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "ConstructionTypeDtoV1.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\ConstructionTypeDtoV1.cs",
+              "RelativeDocumentMoniker": "Hahi\\DTOs\\ConstructionTypeDtoV1.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\ConstructionTypeDtoV1.cs",
+              "RelativeToolTip": "Hahi\\DTOs\\ConstructionTypeDtoV1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T03:12:27.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CreateContractDesignDto.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\CreateContractDesignDto.cs",
+              "RelativeDocumentMoniker": "Hahi\\DTOs\\CreateContractDesignDto.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\CreateContractDesignDto.cs",
+              "RelativeToolTip": "Hahi\\DTOs\\CreateContractDesignDto.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAgwA8AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T12:19:46.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ContractDto.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\ContractDto.cs",
+              "RelativeDocumentMoniker": "Hahi\\DTOs\\ContractDto.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\ContractDto.cs",
+              "RelativeToolTip": "Hahi\\DTOs\\ContractDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T09:22:41.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CreateRequestDesignDto.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\CreateRequestDesignDto.cs",
+              "RelativeDocumentMoniker": "Hahi\\DTOs\\CreateRequestDesignDto.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\CreateRequestDesignDto.cs",
+              "RelativeToolTip": "Hahi\\DTOs\\CreateRequestDesignDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T04:49:31.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "ConstructionTypeDto.cs",
               "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\ConstructionTypeDto.cs",
               "RelativeDocumentMoniker": "Hahi\\DTOs\\ConstructionTypeDto.cs",
@@ -408,143 +489,12 @@
               "RelativeToolTip": "Hahi\\DTOs\\ConstructionTypeDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T02:45:28.101Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CreateConstructionTypeRequestDto.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\CreateConstructionTypeRequestDto.cs",
-              "RelativeDocumentMoniker": "Hahi\\DTOs\\CreateConstructionTypeRequestDto.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\CreateConstructionTypeRequestDto.cs",
-              "RelativeToolTip": "Hahi\\DTOs\\CreateConstructionTypeRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T03:39:55.811Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "User.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\ModelsV1\\User.cs",
-              "RelativeDocumentMoniker": "Hahi\\ModelsV1\\User.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\ModelsV1\\User.cs",
-              "RelativeToolTip": "Hahi\\ModelsV1\\User.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAzwA4AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T11:53:17.594Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "KoisV1Context.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\ModelsV1\\KoisV1Context.cs",
-              "RelativeDocumentMoniker": "Hahi\\ModelsV1\\KoisV1Context.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\ModelsV1\\KoisV1Context.cs",
-              "RelativeToolTip": "Hahi\\ModelsV1\\KoisV1Context.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T11:40:09.753Z"
+              "WhenOpened": "2024-10-03T02:45:28.101Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "CreateDesignRequestDto.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\CreateDesignRequestDto.cs",
-              "RelativeDocumentMoniker": "Hahi\\DTOs\\CreateDesignRequestDto.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\CreateDesignRequestDto.cs",
-              "RelativeToolTip": "Hahi\\DTOs\\CreateDesignRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T03:10:30.095Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ToAccountFromCreatedDto.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\AutoMapper\\ToAccountFromCreatedDto.cs",
-              "RelativeDocumentMoniker": "Hahi\\AutoMapper\\ToAccountFromCreatedDto.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\AutoMapper\\ToAccountFromCreatedDto.cs",
-              "RelativeToolTip": "Hahi\\AutoMapper\\ToAccountFromCreatedDto.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAewBYAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T11:42:12.443Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "DesignDtoV1.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\DesignDtoV1.cs",
-              "RelativeDocumentMoniker": "Hahi\\DTOs\\DesignDtoV1.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\DesignDtoV1.cs",
-              "RelativeToolTip": "Hahi\\DTOs\\DesignDtoV1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T03:08:24.392Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ToUserFromCreatedDto.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\AutoMapper\\ToUserFromCreatedDto.cs",
-              "RelativeDocumentMoniker": "Hahi\\AutoMapper\\ToUserFromCreatedDto.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\AutoMapper\\ToUserFromCreatedDto.cs",
-              "RelativeToolTip": "Hahi\\AutoMapper\\ToUserFromCreatedDto.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAewBkAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T12:10:13.902Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "CreateAccountRequestDto.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\CreateAccountRequestDto.cs",
-              "RelativeDocumentMoniker": "Hahi\\DTOs\\CreateAccountRequestDto.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\CreateAccountRequestDto.cs",
-              "RelativeToolTip": "Hahi\\DTOs\\CreateAccountRequestDto.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T12:47:55.272Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "DesignDto.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\DesignDto.cs",
-              "RelativeDocumentMoniker": "Hahi\\DTOs\\DesignDto.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\DesignDto.cs",
-              "RelativeToolTip": "Hahi\\DTOs\\DesignDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T07:29:54.209Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "SampleDto.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\SampleDto.cs",
-              "RelativeDocumentMoniker": "Hahi\\DTOs\\SampleDto.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\SampleDto.cs",
-              "RelativeToolTip": "Hahi\\DTOs\\SampleDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T07:30:32.736Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "Hahi\\Controllers\\UsersController.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "Hahi\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAmwGsAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T08:52:04.235Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
               "Title": "MaintenancesController.cs",
               "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\MaintenancesController.cs",
               "RelativeDocumentMoniker": "Hahi\\Controllers\\MaintenancesController.cs",
@@ -552,83 +502,90 @@
               "RelativeToolTip": "Hahi\\Controllers\\MaintenancesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T04:02:42.951Z"
+              "WhenOpened": "2024-09-27T04:02:42.951Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "MaintenanceRequestsController.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\MaintenanceRequestsController.cs",
-              "RelativeDocumentMoniker": "Hahi\\Controllers\\MaintenanceRequestsController.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\MaintenanceRequestsController.cs",
-              "RelativeToolTip": "Hahi\\Controllers\\MaintenanceRequestsController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAlwC8AAABIAAAAAAAAAA==",
+              "DocumentIndex": 17,
+              "Title": "UserDtoV1.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\UserDtoV1.cs",
+              "RelativeDocumentMoniker": "Hahi\\DTOs\\UserDtoV1.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\UserDtoV1.cs",
+              "RelativeToolTip": "Hahi\\DTOs\\UserDtoV1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T05:28:00.711Z"
+              "WhenOpened": "2024-10-07T09:53:54.148Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "MaintenancesRepository.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\MaintenancesRepository.cs",
-              "RelativeDocumentMoniker": "Hahi\\Repositories\\MaintenancesRepository.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\MaintenancesRepository.cs",
-              "RelativeToolTip": "Hahi\\Repositories\\MaintenancesRepository.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAgwAsAAAAsAAAAAAAAAA==",
+              "DocumentIndex": 18,
+              "Title": "AccountDto.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\AccountDto.cs",
+              "RelativeDocumentMoniker": "Hahi\\DTOs\\AccountDto.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\AccountDto.cs",
+              "RelativeToolTip": "Hahi\\DTOs\\AccountDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T04:02:10.92Z"
+              "WhenOpened": "2024-10-02T12:45:55.42Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "MaintenanceRequestsRepository.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\MaintenanceRequestsRepository.cs",
-              "RelativeDocumentMoniker": "Hahi\\Repositories\\MaintenanceRequestsRepository.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\MaintenanceRequestsRepository.cs",
-              "RelativeToolTip": "Hahi\\Repositories\\MaintenanceRequestsRepository.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAMwB8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 19,
+              "Title": "KoisV1Context.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\ModelsV1\\KoisV1Context.cs",
+              "RelativeDocumentMoniker": "Hahi\\ModelsV1\\KoisV1Context.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\ModelsV1\\KoisV1Context.cs",
+              "RelativeToolTip": "Hahi\\ModelsV1\\KoisV1Context.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAD4vxQAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T05:27:31.947Z"
+              "WhenOpened": "2024-10-03T11:40:09.753Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "IMaintenanceRequestsRepository.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IMaintenanceRequestsRepository.cs",
-              "RelativeDocumentMoniker": "Hahi\\IRepositories\\IMaintenanceRequestsRepository.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IMaintenanceRequestsRepository.cs",
-              "RelativeToolTip": "Hahi\\IRepositories\\IMaintenanceRequestsRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAiAAAAAAAAAA==",
+              "DocumentIndex": 20,
+              "Title": "UpdateContractSampleDto.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\UpdateContractSampleDto.cs",
+              "RelativeDocumentMoniker": "Hahi\\DTOs\\UpdateContractSampleDto.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\UpdateContractSampleDto.cs",
+              "RelativeToolTip": "Hahi\\DTOs\\UpdateContractSampleDto.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAgwAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T05:27:00.835Z"
+              "WhenOpened": "2024-10-06T10:04:55.566Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Hahi\\Controllers\\AuthController.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Hahi\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAtwA8AAAAVAAAAAAAAAA==",
+              "DocumentIndex": 21,
+              "Title": "UpdateDesignRequestDto.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\UpdateDesignRequestDto.cs",
+              "RelativeDocumentMoniker": "Hahi\\DTOs\\UpdateDesignRequestDto.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\UpdateDesignRequestDto.cs",
+              "RelativeToolTip": "Hahi\\DTOs\\UpdateDesignRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T06:01:27.422Z"
+              "WhenOpened": "2024-10-04T03:14:35.025Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "RequestsController.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\RequestsController.cs",
-              "RelativeDocumentMoniker": "Hahi\\Controllers\\RequestsController.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\RequestsController.cs",
-              "RelativeToolTip": "Hahi\\Controllers\\RequestsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAATAAAAAAAAAA==",
+              "DocumentIndex": 22,
+              "Title": "UpdateContractDesignDto.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\UpdateContractDesignDto.cs",
+              "RelativeDocumentMoniker": "Hahi\\DTOs\\UpdateContractDesignDto.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\UpdateContractDesignDto.cs",
+              "RelativeToolTip": "Hahi\\DTOs\\UpdateContractDesignDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T08:52:17.13Z"
+              "WhenOpened": "2024-10-06T10:04:31.012Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 23,
               "Title": "RolesController.cs",
               "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\RolesController.cs",
               "RelativeDocumentMoniker": "Hahi\\Controllers\\RolesController.cs",
@@ -636,23 +593,184 @@
               "RelativeToolTip": "Hahi\\Controllers\\RolesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T08:56:30.988Z"
+              "WhenOpened": "2024-09-26T08:56:30.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ToRequestFromCreatedDto.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\AutoMapper\\ToRequestFromCreatedDto.cs",
+              "RelativeDocumentMoniker": "Hahi\\AutoMapper\\ToRequestFromCreatedDto.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\AutoMapper\\ToRequestFromCreatedDto.cs",
+              "RelativeToolTip": "Hahi\\AutoMapper\\ToRequestFromCreatedDto.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwDsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T09:40:15.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "UpdateRequestSampleDto.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\UpdateRequestSampleDto.cs",
+              "RelativeDocumentMoniker": "Hahi\\DTOs\\UpdateRequestSampleDto.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\UpdateRequestSampleDto.cs",
+              "RelativeToolTip": "Hahi\\DTOs\\UpdateRequestSampleDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T10:26:12.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "UpdateRequestDesignDto.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\UpdateRequestDesignDto.cs",
+              "RelativeDocumentMoniker": "Hahi\\DTOs\\UpdateRequestDesignDto.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\UpdateRequestDesignDto.cs",
+              "RelativeToolTip": "Hahi\\DTOs\\UpdateRequestDesignDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T05:07:49.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ContractsRepository.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\ContractsRepository.cs",
+              "RelativeDocumentMoniker": "Hahi\\Repositories\\ContractsRepository.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\ContractsRepository.cs",
+              "RelativeToolTip": "Hahi\\Repositories\\ContractsRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T09:31:55.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ToSampleFromCreatedDto.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\AutoMapper\\ToSampleFromCreatedDto.cs",
+              "RelativeDocumentMoniker": "Hahi\\AutoMapper\\ToSampleFromCreatedDto.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\AutoMapper\\ToSampleFromCreatedDto.cs",
+              "RelativeToolTip": "Hahi\\AutoMapper\\ToSampleFromCreatedDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T06:14:09.849Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ToUserFromCreatedDto.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\AutoMapper\\ToUserFromCreatedDto.cs",
+              "RelativeDocumentMoniker": "Hahi\\AutoMapper\\ToUserFromCreatedDto.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\AutoMapper\\ToUserFromCreatedDto.cs",
+              "RelativeToolTip": "Hahi\\AutoMapper\\ToUserFromCreatedDto.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAIA0wBkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T12:10:13.902Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "RequestsRepository.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\RequestsRepository.cs",
+              "RelativeDocumentMoniker": "Hahi\\Repositories\\RequestsRepository.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\RequestsRepository.cs",
+              "RelativeToolTip": "Hahi\\Repositories\\RequestsRepository.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAADwv0sAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T09:40:05.362Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "CreateDesignRequestDto.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\CreateDesignRequestDto.cs",
+              "RelativeDocumentMoniker": "Hahi\\DTOs\\CreateDesignRequestDto.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\CreateDesignRequestDto.cs",
+              "RelativeToolTip": "Hahi\\DTOs\\CreateDesignRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T03:10:30.095Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 32,
-              "Title": "SamplesController.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\SamplesController.cs",
-              "RelativeDocumentMoniker": "Hahi\\Controllers\\SamplesController.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\SamplesController.cs",
-              "RelativeToolTip": "Hahi\\Controllers\\SamplesController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAATAAAAAAAAAA==",
+              "Title": "IRequestsRepository.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IRequestsRepository.cs",
+              "RelativeDocumentMoniker": "Hahi\\IRepositories\\IRequestsRepository.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IRequestsRepository.cs",
+              "RelativeToolTip": "Hahi\\IRepositories\\IRequestsRepository.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAawAwAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T05:30:23.451Z"
+              "WhenOpened": "2024-09-25T09:44:25.478Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 33,
+              "Title": "Program.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Program.cs",
+              "RelativeDocumentMoniker": "Hahi\\Program.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Program.cs",
+              "RelativeToolTip": "Hahi\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHQAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T08:47:45.131Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "UpdateSampleRequestDto.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\UpdateSampleRequestDto.cs",
+              "RelativeDocumentMoniker": "Hahi\\DTOs\\UpdateSampleRequestDto.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\UpdateSampleRequestDto.cs",
+              "RelativeToolTip": "Hahi\\DTOs\\UpdateSampleRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T06:02:54.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "CreateSampleRequestDto.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\CreateSampleRequestDto.cs",
+              "RelativeDocumentMoniker": "Hahi\\DTOs\\CreateSampleRequestDto.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\CreateSampleRequestDto.cs",
+              "RelativeToolTip": "Hahi\\DTOs\\CreateSampleRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T05:57:30.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Hahi\\Controllers\\AuthController.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Hahi\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAtwA8AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T06:01:27.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "User.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\ModelsV1\\User.cs",
+              "RelativeDocumentMoniker": "Hahi\\ModelsV1\\User.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\ModelsV1\\User.cs",
+              "RelativeToolTip": "Hahi\\ModelsV1\\User.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T11:53:17.594Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
               "Title": "UpdateUserRequestDto.cs",
               "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\UpdateUserRequestDto.cs",
               "RelativeDocumentMoniker": "Hahi\\DTOs\\UpdateUserRequestDto.cs",
@@ -664,211 +782,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\UserDto.cs",
-              "RelativeDocumentMoniker": "Hahi\\DTOs\\UserDto.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\UserDto.cs",
-              "RelativeToolTip": "Hahi\\DTOs\\UserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T12:11:44.623Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "CreateUserRequestDto.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\CreateUserRequestDto.cs",
-              "RelativeDocumentMoniker": "Hahi\\DTOs\\CreateUserRequestDto.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\CreateUserRequestDto.cs",
-              "RelativeToolTip": "Hahi\\DTOs\\CreateUserRequestDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T12:24:22.965Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "AccountDto.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\AccountDto.cs",
-              "RelativeDocumentMoniker": "Hahi\\DTOs\\AccountDto.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\AccountDto.cs",
-              "RelativeToolTip": "Hahi\\DTOs\\AccountDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T12:45:55.42Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "UsersRepository.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\UsersRepository.cs",
-              "RelativeDocumentMoniker": "Hahi\\Repositories\\UsersRepository.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\UsersRepository.cs",
-              "RelativeToolTip": "Hahi\\Repositories\\UsersRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T08:51:29.144Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "SamplesRepository.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\SamplesRepository.cs",
-              "RelativeDocumentMoniker": "Hahi\\Repositories\\SamplesRepository.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\SamplesRepository.cs",
-              "RelativeToolTip": "Hahi\\Repositories\\SamplesRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T05:29:50.795Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 39,
-              "Title": "RolesRepository.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\RolesRepository.cs",
-              "RelativeDocumentMoniker": "Hahi\\Repositories\\RolesRepository.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\RolesRepository.cs",
-              "RelativeToolTip": "Hahi\\Repositories\\RolesRepository.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAsAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T08:55:58.668Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "RequestsRepository.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\RequestsRepository.cs",
-              "RelativeDocumentMoniker": "Hahi\\Repositories\\RequestsRepository.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\RequestsRepository.cs",
-              "RelativeToolTip": "Hahi\\Repositories\\RequestsRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T09:40:05.362Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "IUsersRepository.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IUsersRepository.cs",
-              "RelativeDocumentMoniker": "Hahi\\IRepositories\\IUsersRepository.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IUsersRepository.cs",
-              "RelativeToolTip": "Hahi\\IRepositories\\IUsersRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T08:50:46.063Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "ISamplesRepository.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\ISamplesRepository.cs",
-              "RelativeDocumentMoniker": "Hahi\\IRepositories\\ISamplesRepository.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\ISamplesRepository.cs",
-              "RelativeToolTip": "Hahi\\IRepositories\\ISamplesRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T05:29:27.822Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "IRolesRepository.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IRolesRepository.cs",
-              "RelativeDocumentMoniker": "Hahi\\IRepositories\\IRolesRepository.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IRolesRepository.cs",
-              "RelativeToolTip": "Hahi\\IRepositories\\IRolesRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T08:55:34.175Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "IRequestsRepository.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IRequestsRepository.cs",
-              "RelativeDocumentMoniker": "Hahi\\IRepositories\\IRequestsRepository.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IRequestsRepository.cs",
-              "RelativeToolTip": "Hahi\\IRepositories\\IRequestsRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T09:44:25.478Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "ContractsRepository.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\ContractsRepository.cs",
-              "RelativeDocumentMoniker": "Hahi\\Repositories\\ContractsRepository.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\ContractsRepository.cs",
-              "RelativeToolTip": "Hahi\\Repositories\\ContractsRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T09:31:55.228Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "AccountsRepository.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\AccountsRepository.cs",
-              "RelativeDocumentMoniker": "Hahi\\Repositories\\AccountsRepository.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\AccountsRepository.cs",
-              "RelativeToolTip": "Hahi\\Repositories\\AccountsRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T08:43:28.046Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "IMaintenancesRepository.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IMaintenancesRepository.cs",
-              "RelativeDocumentMoniker": "Hahi\\IRepositories\\IMaintenancesRepository.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IMaintenancesRepository.cs",
-              "RelativeToolTip": "Hahi\\IRepositories\\IMaintenancesRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T04:01:44.783Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "IContractsRepository.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IContractsRepository.cs",
-              "RelativeDocumentMoniker": "Hahi\\IRepositories\\IContractsRepository.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IContractsRepository.cs",
-              "RelativeToolTip": "Hahi\\IRepositories\\IContractsRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T09:31:27.202Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "IAccountsRepository.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IAccountsRepository.cs",
-              "RelativeDocumentMoniker": "Hahi\\IRepositories\\IAccountsRepository.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IAccountsRepository.cs",
-              "RelativeToolTip": "Hahi\\IRepositories\\IAccountsRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T08:43:03.962Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "Program.cs",
-              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Program.cs",
-              "RelativeDocumentMoniker": "Hahi\\Program.cs",
-              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Program.cs",
-              "RelativeToolTip": "Hahi\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T08:47:45.131Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
               "Title": "appsettings.json",
               "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\appsettings.json",
               "RelativeDocumentMoniker": "Hahi\\appsettings.json",
@@ -880,7 +794,259 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "DesignDto.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\DesignDto.cs",
+              "RelativeDocumentMoniker": "Hahi\\DTOs\\DesignDto.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\DesignDto.cs",
+              "RelativeToolTip": "Hahi\\DTOs\\DesignDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T07:29:54.209Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "CreateUserRequestDto.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\CreateUserRequestDto.cs",
+              "RelativeDocumentMoniker": "Hahi\\DTOs\\CreateUserRequestDto.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\CreateUserRequestDto.cs",
+              "RelativeToolTip": "Hahi\\DTOs\\CreateUserRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T12:24:22.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "SamplesRepository.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\SamplesRepository.cs",
+              "RelativeDocumentMoniker": "Hahi\\Repositories\\SamplesRepository.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\SamplesRepository.cs",
+              "RelativeToolTip": "Hahi\\Repositories\\SamplesRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAgwDsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T05:29:50.795Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "SampleDto.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\SampleDto.cs",
+              "RelativeDocumentMoniker": "Hahi\\DTOs\\SampleDto.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\SampleDto.cs",
+              "RelativeToolTip": "Hahi\\DTOs\\SampleDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T07:30:32.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "ISamplesRepository.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\ISamplesRepository.cs",
+              "RelativeDocumentMoniker": "Hahi\\IRepositories\\ISamplesRepository.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\ISamplesRepository.cs",
+              "RelativeToolTip": "Hahi\\IRepositories\\ISamplesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T05:29:27.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "DesignsRepository.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\DesignsRepository.cs",
+              "RelativeDocumentMoniker": "Hahi\\Repositories\\DesignsRepository.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\DesignsRepository.cs",
+              "RelativeToolTip": "Hahi\\Repositories\\DesignsRepository.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAA3wDkAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T03:58:59.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "ConstructionTypesRepository.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\ConstructionTypesRepository.cs",
+              "RelativeDocumentMoniker": "Hahi\\Repositories\\ConstructionTypesRepository.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\ConstructionTypesRepository.cs",
+              "RelativeToolTip": "Hahi\\Repositories\\ConstructionTypesRepository.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T09:05:26.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "IDesignsRepository.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IDesignsRepository.cs",
+              "RelativeDocumentMoniker": "Hahi\\IRepositories\\IDesignsRepository.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IDesignsRepository.cs",
+              "RelativeToolTip": "Hahi\\IRepositories\\IDesignsRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T03:58:34.248Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "IConstructionTypesRepository.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IConstructionTypesRepository.cs",
+              "RelativeDocumentMoniker": "Hahi\\IRepositories\\IConstructionTypesRepository.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IConstructionTypesRepository.cs",
+              "RelativeToolTip": "Hahi\\IRepositories\\IConstructionTypesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T09:05:03.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "CreateConstructionTypeRequestDto.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\CreateConstructionTypeRequestDto.cs",
+              "RelativeDocumentMoniker": "Hahi\\DTOs\\CreateConstructionTypeRequestDto.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\CreateConstructionTypeRequestDto.cs",
+              "RelativeToolTip": "Hahi\\DTOs\\CreateConstructionTypeRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-03T03:39:55.811Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "CreateAccountRequestDto.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\CreateAccountRequestDto.cs",
+              "RelativeDocumentMoniker": "Hahi\\DTOs\\CreateAccountRequestDto.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\DTOs\\CreateAccountRequestDto.cs",
+              "RelativeToolTip": "Hahi\\DTOs\\CreateAccountRequestDto.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-02T12:47:55.272Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 52,
+              "Title": "MaintenancesRepository.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\MaintenancesRepository.cs",
+              "RelativeDocumentMoniker": "Hahi\\Repositories\\MaintenancesRepository.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\MaintenancesRepository.cs",
+              "RelativeToolTip": "Hahi\\Repositories\\MaintenancesRepository.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAgwAsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T04:02:10.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "MaintenanceRequestsRepository.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\MaintenanceRequestsRepository.cs",
+              "RelativeDocumentMoniker": "Hahi\\Repositories\\MaintenanceRequestsRepository.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\MaintenanceRequestsRepository.cs",
+              "RelativeToolTip": "Hahi\\Repositories\\MaintenanceRequestsRepository.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAMwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T05:27:31.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "IMaintenanceRequestsRepository.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IMaintenanceRequestsRepository.cs",
+              "RelativeDocumentMoniker": "Hahi\\IRepositories\\IMaintenanceRequestsRepository.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IMaintenanceRequestsRepository.cs",
+              "RelativeToolTip": "Hahi\\IRepositories\\IMaintenanceRequestsRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T05:27:00.835Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "UsersRepository.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\UsersRepository.cs",
+              "RelativeDocumentMoniker": "Hahi\\Repositories\\UsersRepository.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\UsersRepository.cs",
+              "RelativeToolTip": "Hahi\\Repositories\\UsersRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T08:51:29.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "RolesRepository.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\RolesRepository.cs",
+              "RelativeDocumentMoniker": "Hahi\\Repositories\\RolesRepository.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\RolesRepository.cs",
+              "RelativeToolTip": "Hahi\\Repositories\\RolesRepository.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAsAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T08:55:58.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "IUsersRepository.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IUsersRepository.cs",
+              "RelativeDocumentMoniker": "Hahi\\IRepositories\\IUsersRepository.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IUsersRepository.cs",
+              "RelativeToolTip": "Hahi\\IRepositories\\IUsersRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T08:50:46.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "IRolesRepository.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IRolesRepository.cs",
+              "RelativeDocumentMoniker": "Hahi\\IRepositories\\IRolesRepository.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IRolesRepository.cs",
+              "RelativeToolTip": "Hahi\\IRepositories\\IRolesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T08:55:34.175Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "AccountsRepository.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\AccountsRepository.cs",
+              "RelativeDocumentMoniker": "Hahi\\Repositories\\AccountsRepository.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\Repositories\\AccountsRepository.cs",
+              "RelativeToolTip": "Hahi\\Repositories\\AccountsRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T08:43:28.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "IMaintenancesRepository.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IMaintenancesRepository.cs",
+              "RelativeDocumentMoniker": "Hahi\\IRepositories\\IMaintenancesRepository.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IMaintenancesRepository.cs",
+              "RelativeToolTip": "Hahi\\IRepositories\\IMaintenancesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T04:01:44.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "IAccountsRepository.cs",
+              "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IAccountsRepository.cs",
+              "RelativeDocumentMoniker": "Hahi\\IRepositories\\IAccountsRepository.cs",
+              "ToolTip": "F:\\GitHubDesktop\\Hahi\\Hahi\\IRepositories\\IAccountsRepository.cs",
+              "RelativeToolTip": "Hahi\\IRepositories\\IAccountsRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T08:43:03.962Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
               "Title": "Dockerfile",
               "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Dockerfile",
               "RelativeDocumentMoniker": "Hahi\\Dockerfile",
@@ -892,7 +1058,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 62,
               "Title": "launchSettings.json",
               "DocumentMoniker": "F:\\GitHubDesktop\\Hahi\\Hahi\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Hahi\\Properties\\launchSettings.json",

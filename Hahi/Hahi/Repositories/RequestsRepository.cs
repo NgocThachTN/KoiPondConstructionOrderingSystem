@@ -47,15 +47,33 @@ namespace Hahi.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteRequestAsync(int id)
+        public async Task<bool> DeleteRequestAsync(int id)
         {
-            var request = await _context.Requests.FindAsync(id);
+            var request = await _context.Requests.Include(r => r.Design)
+                                                 .Include(r => r.Sample)
+                                                 .FirstOrDefaultAsync(r => r.RequestId == id);
             if (request != null)
             {
+                // Kiểm tra và xóa Design nếu có
+                if (request.Design != null)
+                {
+                    _context.Designs.Remove(request.Design);
+                }
+
+                // Kiểm tra và xóa Sample nếu có
+                if (request.Sample != null)
+                {
+                    _context.Samples.Remove(request.Sample);
+                }
+
+                // Xóa request
                 _context.Requests.Remove(request);
                 await _context.SaveChangesAsync();
+                return true; // Xóa thành công
             }
+            return false; // Không tìm thấy request
         }
+
 
         public async Task<bool> RequestExistsAsync(int id)
         {

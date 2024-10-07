@@ -18,15 +18,26 @@ namespace Hahi.Repositories
         {
             return await _context.Contracts
                 .Include(c => c.Request)
+                .ThenInclude(r => r.User)
+                .Include(c => c.Request)
+                .ThenInclude(r => r.Design)
+                .Include(c => c.Request)
+                .ThenInclude(r => r.Sample)
                 .ToListAsync();
         }
 
-        public async Task<Contract?> GetContractByIdAsync(int id)
+        public async Task<Contract> GetContractByIdAsync(int id)
         {
             return await _context.Contracts
-                .Include(c => c.Request) // Include Request relationship
+                .Include(c => c.Request)
+                .ThenInclude(r => r.User)
+                .Include(c => c.Request)
+                .ThenInclude(r => r.Design)
+                .Include(c => c.Request)
+                .ThenInclude(r => r.Sample)
                 .FirstOrDefaultAsync(c => c.ContractId == id);
         }
+
 
         public async Task AddContractAsync(Contract contract)
         {

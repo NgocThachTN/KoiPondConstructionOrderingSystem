@@ -42,14 +42,20 @@ namespace Hahi.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteSampleAsync(int sampleId)
+        public async Task<bool> DeleteSampleAsync(int sampleId)
         {
             var sample = await GetSampleByIdAsync(sampleId);
-            if (sample != null)
+            if (sample == null)
             {
                 _context.Samples.Remove(sample);
-                await _context.SaveChangesAsync();
+                return false;
             }
+
+            // Tiến hành xóa tài khoản và lưu thay đổi
+            _context.Samples.Remove(sample);
+            await _context.SaveChangesAsync();
+
+            return true;
         }
 
         public async Task<bool> SampleExistsAsync(int sampleId)

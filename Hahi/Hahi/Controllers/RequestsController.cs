@@ -1,9 +1,12 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Hahi.ModelsV1;
 using Hahi.Repositories;
 using Microsoft.AspNetCore.Authorization;
+using Hahi.DTOs; // Ensure you include this to access the DTOs
+using Hahi.AutoMapper; // Include for the RequestMapper and ContractMapper
 
 namespace Hahi.Controllers
 {
@@ -13,23 +16,26 @@ namespace Hahi.Controllers
     public class RequestsController : ControllerBase
     {
         private readonly IRequestsRepository _repository;
+        private KoisV1Context _context;
 
-        public RequestsController(IRequestsRepository repository)
+        public RequestsController(IRequestsRepository repository, KoisV1Context context)
         {
             _repository = repository;
+            _context = context;
         }
 
         // GET: api/Requests
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Request>>> GetRequests()
+        public async Task<ActionResult<IEnumerable<RequestDto>>> GetRequests()
         {
             var requests = await _repository.GetRequestsAsync();
-            return Ok(requests);
+            var requestDtos = requests.Select(request => request.ToRequestDto()).ToList(); // Using RequestMapper
+            return Ok(requestDtos);
         }
 
         // GET: api/Requests/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Request>> GetRequest(int id)
+        public async Task<ActionResult<RequestDto>> GetRequest(int id)
         {
             var request = await _repository.GetRequestByIdAsync(id);
 
@@ -38,67 +44,181 @@ namespace Hahi.Controllers
                 return NotFound();
             }
 
-            return Ok(request);
+            var requestDto = request.ToRequestDto(); // Using RequestMapper
+            return Ok(requestDto);
         }
 
-        // PUT: api/Requests/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutRequest(int id, Request request)
+        // PUT: api/Requests/ByDesign/5
+        [HttpPut("ByDesign/{id}")]
+        public async Task<ActionResult<RequestDto>> PutRequestByDesign(int id, UpdateRequestDesignDto requestDto)
         {
-            if (id != request.RequestId)
+            var existingRequest = await _repository.GetRequestByIdAsync(id);
+            if (existingRequest == null)
             {
-                return BadRequest();
+                return NotFound("Request not found.");
             }
 
-            try
+            existingRequest.RequestName = requestDto.RequestName;
+            existingRequest.Description = requestDto.Description;
+
+            // Update the User and Account information
+            existingRequest.User ??= new User();
+            existingRequest.User.Name = requestDto.User.Name;
+            existingRequest.User.PhoneNumber = requestDto.User.PhoneNumber;
+            existingRequest.User.Address = requestDto.User.Address;
+            existingRequest.User.Account ??= new Account();
+            existingRequest.User.Account.UserName = requestDto.User.UserName;
+            existingRequest.User.Account.Email = requestDto.User.Email;
+            existingRequest.User.Account.Password = requestDto.User.Password;
+            existingRequest.User.RoleId = requestDto.User.RoleId;
+
+            if (requestDto.Design != null)
             {
-                await _repository.UpdateRequestAsync(request);
-            }
-            catch
-            {
-                if (!await _repository.RequestExistsAsync(id))
+                existingRequest.Design = new Design
                 {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                    ConstructionType = new ConstructionType
+                    {
+                        ConstructionTypeName = requestDto.Design.ConstructionTypeName
+                    },
+                    DesignName = requestDto.Design.DesignName,
+                    DesignSize = requestDto.Design.DesignSize,
+                    DesignPrice = requestDto.Design.DesignPrice,
+                    DesignImage = requestDto.Design.DesignImage
+                };
             }
 
-            return NoContent();
+            await _repository.UpdateRequestAsync(existingRequest);
+            var requestResultDto = existingRequest.ToRequestDto(); // Using RequestMapper
+            return Ok(requestResultDto);
         }
 
-        // POST: api/Requests
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<Request>> PostRequest(Request request)
+        // PUT: api/Requests/BySample/5
+        [HttpPut("BySample/{id}")]
+        public async Task<ActionResult<RequestDto>> PutRequestBySample(int id, UpdateRequestSampleDto requestDto)
         {
+            var existingRequest = await _repository.GetRequestByIdAsync(id);
+            if (existingRequest == null)
+            {
+                return NotFound("Request not found.");
+            }
+
+            // Update Request details
+            existingRequest.RequestName = requestDto.RequestName;
+            existingRequest.Description = requestDto.Description;
+
+            // Update the User and Account information
+            existingRequest.User ??= new User();
+            existingRequest.User.Name = requestDto.User.Name;
+            existingRequest.User.PhoneNumber = requestDto.User.PhoneNumber;
+            existingRequest.User.Address = requestDto.User.Address;
+            existingRequest.User.Account ??= new Account();
+            existingRequest.User.Account.UserName = requestDto.User.UserName;
+            existingRequest.User.Account.Email = requestDto.User.Email;
+            existingRequest.User.Account.Password = requestDto.User.Password;
+            existingRequest.User.RoleId = requestDto.User.RoleId;
+
+            // Update Sample information
+            if (requestDto.Sample != null)
+            {
+                existingRequest.Sample = new Sample
+                {
+                    ConstructionType = new ConstructionType
+                    {
+                        ConstructionTypeName = requestDto.Sample.ConstructionTypeName
+                    },
+                    SampleName = requestDto.Sample.SampleName,
+                    SampleSize = requestDto.Sample.SampleSize,
+                    SamplePrice = requestDto.Sample.SamplePrice,
+                    SampleImage = requestDto.Sample.SampleImage
+                };
+            }
+
+            // Update the request in the database
+            await _repository.UpdateRequestAsync(existingRequest);
+            var requestResultDto = existingRequest.ToRequestDto(); // Using RequestMapper
+
+            return Ok(requestResultDto);
+        }
+
+
+        // POST: api/Requests/ByDesign
+        [HttpPost("ByDesign")]
+        public async Task<ActionResult<RequestDto>> PostRequestByDesign(CreateRequestDesignDto requestDto)
+        {
+            if (!requestDto.IsDesignSelected)
+            {
+                return BadRequest("Design must be selected for this endpoint.");
+            }
+
+            var request = requestDto.ToRequestDesignFromCreatedDto();
             await _repository.AddRequestAsync(request);
-            return CreatedAtAction(nameof(GetRequest), new { id = request.RequestId }, request);
+            var requestResultDto = request.ToRequestDto(); // Using RequestMapper
+            return CreatedAtAction(nameof(GetRequest), new { id = request.RequestId }, requestResultDto);
         }
 
-        // DELETE: api/Requests/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteRequest(int id)
+        // POST: api/Requests/BySample
+        [HttpPost("BySample")]
+        public async Task<ActionResult<RequestDto>> PostRequestBySample(CreateRequestSampleDto requestDto)
         {
-            var request = await _repository.GetRequestByIdAsync(id);
-            if (request == null)
+            if (!requestDto.IsSampleSelected)
             {
-                return NotFound();
+                return BadRequest("Sample must be selected for this endpoint.");
             }
 
-            try
+            var request = requestDto.ToRequestSampleFromCreatedDto();
+            await _repository.AddRequestAsync(request);
+            var requestResultDto = request.ToRequestDto(); // Using RequestMapper
+            return CreatedAtAction(nameof(GetRequest), new { id = request.RequestId }, requestResultDto);
+        }
+
+        // DELETE: api/Requests/ByDesign/5
+        [HttpDelete("ByDesign/{id}")]
+        public async Task<ActionResult<RequestDto>> DeleteRequestByDesign(int id)
+        {
+            var existingRequest = await _repository.GetRequestByIdAsync(id);
+            if (existingRequest == null)
             {
-                await _repository.DeleteRequestAsync(id);
-            }
-            catch
-            {
-                return StatusCode(500, "Error deleting request. It might have related data in other tables.");
+                return NotFound("Request not found.");
             }
 
-            return NoContent();
+            if (existingRequest.Design == null)
+            {
+                return BadRequest("This request does not have a design associated with it.");
+            }
+
+            var result = await _repository.DeleteRequestAsync(id);
+            if (!result)
+            {
+                return StatusCode(500, "Error deleting the request.");
+            }
+
+            var requestDto = existingRequest.ToRequestDto(); // Using RequestMapper
+            return Ok(requestDto);
+        }
+
+        // DELETE: api/Requests/BySample/5
+        [HttpDelete("BySample/{id}")]
+        public async Task<ActionResult<RequestDto>> DeleteRequestBySample(int id)
+        {
+            var existingRequest = await _repository.GetRequestByIdAsync(id);
+            if (existingRequest == null)
+            {
+                return NotFound("Request not found.");
+            }
+
+            if (existingRequest.Sample == null)
+            {
+                return BadRequest("This request does not have a sample associated with it.");
+            }
+
+            var result = await _repository.DeleteRequestAsync(id);
+            if (!result)
+            {
+                return StatusCode(500, "Error deleting the request.");
+            }
+
+            var requestDto = existingRequest.ToRequestDto(); // Using RequestMapper
+            return Ok(requestDto);
         }
     }
 }

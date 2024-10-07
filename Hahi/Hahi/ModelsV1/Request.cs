@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hahi.Controllers;
+using System;
 using System.Collections.Generic;
 
 namespace Hahi.ModelsV1
@@ -22,5 +23,6 @@ namespace Hahi.ModelsV1
         public virtual User? User { get; set; }
         public virtual Contract? Contract { get; set; }
         public virtual ICollection<MaintenanceRequest> MaintenanceRequests { get; set; }
+
     }
 }
