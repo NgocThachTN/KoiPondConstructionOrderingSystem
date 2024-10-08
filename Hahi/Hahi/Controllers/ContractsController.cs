@@ -283,8 +283,8 @@ namespace Hahi.Controllers
             // Retrieve the existing contract with the specified ID
             var existingContract = await _context.Contracts
                 .Include(c => c.Request)
-                .ThenInclude(r => r.Sample) // Include Sample to check if it exists
-                .Include(c => c.Request.Design) // Include Design to check if it exists
+                .ThenInclude(r => r.Sample) 
+                .Include(c => c.Request.Design) 
                 .FirstOrDefaultAsync(c => c.ContractId == id);
 
             if (existingContract == null)

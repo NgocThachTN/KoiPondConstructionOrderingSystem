@@ -7,22 +7,23 @@ namespace Hahi.AutoMapper
     {
         public static AccountDto ToAccountDto(this Account account)
         {
-            // Check if Account is null
             if (account.User == null)
             {
-                throw new InvalidOperationException("Related User not found."); // Or handle it appropriately
+                return null; // Or return a default AccountDto if needed
             }
+
             return new AccountDto
             {
-                UserName = account.UserName,
-                Email = account.Email,
-                Password = account.Password,
+                UserName = account.User.Account?.UserName,
+                Email = account.User.Account?.Email,
+                Password = account.User.Account?.Password,
                 Name = account.User.Name,
                 PhoneNumber = account.User.PhoneNumber,
                 Address = account.User.Address,
-                RoleId = account.User.RoleId
+                RoleId = account.User.RoleId,
             };
         }
+
         public static Account ToAccountFromCreatedDto(this CreateAccountRequestDto accountDto)
         {
             return new Account

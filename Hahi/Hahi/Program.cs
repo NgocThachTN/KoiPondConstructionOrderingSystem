@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
@@ -27,7 +26,7 @@ builder.Services.AddControllers().AddJsonOptions(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Koi Pond API", Version = "v1" });
     c.ExampleFilters();
 
     // Add JWT Authentication to Swagger
@@ -110,6 +109,7 @@ builder.Services.AddAuthorization(options =>
     // Example policy: Only users with the "Admin" role can access certain endpoints
     options.AddPolicy("Customer", policy => policy.RequireRole("Customer"));
     options.AddPolicy("Manager", policy => policy.RequireRole("Manager"));
+    options.AddPolicy("Staff", policy => policy.RequireRole("Staff"));
 });
 
 var app = builder.Build();

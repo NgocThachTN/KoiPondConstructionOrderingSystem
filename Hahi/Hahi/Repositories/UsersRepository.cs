@@ -19,8 +19,10 @@ namespace Hahi.Repositories
             return await _context.Users
                                  .Include(u => u.Account) // Include related Account
                                  .Include(u => u.Role)    // Include related Role
+                                 .Where(u => u.Account != null) // Ensure that Account is not null
                                  .ToListAsync();
         }
+
 
         public async Task<User?> GetUserByIdAsync(int id)
         {

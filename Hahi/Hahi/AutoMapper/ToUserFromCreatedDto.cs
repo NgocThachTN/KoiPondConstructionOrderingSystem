@@ -9,10 +9,9 @@ namespace Hahi.AutoMapper
     {
         public static UserDto ToUserDto(this User user)
         {
-            // Check if Account is null
             if (user.Account == null)
             {
-                throw new InvalidOperationException("Related Account not found."); // Or handle it appropriately
+                return null; // Or handle the null case appropriately, depending on your requirements
             }
 
             return new UserDto
@@ -26,6 +25,7 @@ namespace Hahi.AutoMapper
                 RoleId = user.RoleId
             };
         }
+
 
 
         public static User ToUserFromCreatedDto(this CreateUserRequestDto userDto)

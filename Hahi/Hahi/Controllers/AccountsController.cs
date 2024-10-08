@@ -28,12 +28,19 @@ namespace Hahi.Controllers
 
         // GET: api/Accounts
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Account>>> GetAccounts()
+        public async Task<ActionResult<IEnumerable<AccountDto>>> GetAccounts()
         {
-            var accounts = await _repository.GetAccounts().ToListAsync();
-            var requestDtos = accounts.Select(account => account.ToAccountDto()).ToList(); // Using RequestMapper
+            var accounts = await _repository.GetAccounts()
+                                            .Where(account => account.User != null)
+                                            .ToListAsync();
+
+            var requestDtos = accounts.Select(account => account.ToAccountDto())
+                                      .Where(dto => dto != null)
+                                      .ToList();
+
             return Ok(requestDtos);
         }
+
 
 
         // GET: api/Accounts/5
