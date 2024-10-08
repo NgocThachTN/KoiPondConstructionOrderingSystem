@@ -13,5 +13,7 @@
     {
         public List<UserDto> Users { get; set; }
         public List<DesignDtoV1> Designs { get; set; }
+        public string? RequestName { get; set; }
+        public string? Description { get; set; }
     }
 }

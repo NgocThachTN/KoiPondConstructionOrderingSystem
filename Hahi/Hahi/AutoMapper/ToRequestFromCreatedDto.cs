@@ -70,15 +70,15 @@ namespace Hahi.AutoMapper
                     Name = requestDto.User.Name,
                     PhoneNumber = requestDto.User.PhoneNumber,
                     Address = requestDto.User.Address,
-                    RoleId = requestDto.User.RoleId, // Assuming RoleId is provided in UserDto
-
-                    // Create and assign the Account to User
                     Account = new Account
                     {
                         UserName = requestDto.User.UserName,
                         Email = requestDto.User.Email,
                         Password = requestDto.User.Password
-                    }
+                    },
+                    RoleId = requestDto.User.RoleId, // Assuming RoleId is provided in UserDto
+
+                    // Create and assign the Account to User
                 },
 
                 // Assign Design or Sample based on selection
@@ -111,15 +111,15 @@ namespace Hahi.AutoMapper
                     Name = requestDto.User.Name,
                     PhoneNumber = requestDto.User.PhoneNumber,
                     Address = requestDto.User.Address,
-                    RoleId = requestDto.User.RoleId, // Assuming RoleId is provided in UserDto
-
-                    // Create and assign the Account to User
                     Account = new Account
                     {
                         UserName = requestDto.User.UserName,
                         Email = requestDto.User.Email,
                         Password = requestDto.User.Password
-                    }
+                    },
+                    RoleId = requestDto.User.RoleId, // Assuming RoleId is provided in UserDto
+
+                    // Create and assign the Account to User
                 },
 
                 // Assign Design or Sample based on selection

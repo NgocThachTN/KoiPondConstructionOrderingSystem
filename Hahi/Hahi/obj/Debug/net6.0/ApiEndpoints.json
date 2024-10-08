@@ -510,7 +510,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[Hahi.ModelsV1.MaintenanceRequest, Hahi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Hahi.DTOs.MaintenanceRequestDto, Hahi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -522,52 +522,21 @@
   },
   {
     "ContainingType": "Hahi.Controllers.MaintenanceRequestsController",
-    "Method": "PostMaintenanceRequest",
-    "RelativePath": "api/MaintenanceRequests",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "maintenanceRequest",
-        "Type": "Hahi.ModelsV1.MaintenanceRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "Hahi.ModelsV1.MaintenanceRequest",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Hahi.Controllers.MaintenanceRequestsController",
-    "Method": "GetMaintenanceRequest",
-    "RelativePath": "api/MaintenanceRequests/{maintenanceId}/{requestId}",
+    "Method": "GetMaintenanceRequestById",
+    "RelativePath": "api/MaintenanceRequests/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "maintenanceId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "requestId",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Hahi.ModelsV1.MaintenanceRequest",
+        "Type": "Hahi.DTOs.MaintenanceRequestDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -579,50 +548,55 @@
   },
   {
     "ContainingType": "Hahi.Controllers.MaintenanceRequestsController",
-    "Method": "PutMaintenanceRequest",
-    "RelativePath": "api/MaintenanceRequests/{maintenanceId}/{requestId}",
-    "HttpMethod": "PUT",
+    "Method": "PostMaintenanceByRequestDesign",
+    "RelativePath": "api/MaintenanceRequests/ByMaintenanceRequestDesign",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "maintenanceId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "requestId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "maintenanceRequest",
-        "Type": "Hahi.ModelsV1.MaintenanceRequest",
+        "Name": "maintenanceRequestDto",
+        "Type": "Hahi.DTOs.CreateMaintenanceRequestDesignDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Hahi.DTOs.MaintenanceRequestDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "Hahi.Controllers.MaintenanceRequestsController",
-    "Method": "DeleteMaintenanceRequest",
-    "RelativePath": "api/MaintenanceRequests/{maintenanceId}/{requestId}",
-    "HttpMethod": "DELETE",
+    "Method": "PostMaintenanceByRequestSample",
+    "RelativePath": "api/MaintenanceRequests/ByMaintenanceRequestSample",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "maintenanceId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "requestId",
-        "Type": "System.Int32",
+        "Name": "maintenanceRequestDto",
+        "Type": "Hahi.DTOs.CreateMaintenanceRequestSampleDto",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "Hahi.DTOs.MaintenanceRequestDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "Hahi.Controllers.MaintenancesController",

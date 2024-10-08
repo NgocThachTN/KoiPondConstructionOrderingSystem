@@ -7,10 +7,10 @@ namespace Hahi.Repositories
     public interface IMaintenanceRequestsRepository
     {
         Task<IEnumerable<MaintenanceRequest>> GetMaintenanceRequestsAsync();
-        Task<MaintenanceRequest?> GetMaintenanceRequestByIdAsync(int maintenanceId, int requestId);
+        Task<MaintenanceRequest?> GetMaintenanceRequestByIdAsync(int id);
         Task AddMaintenanceRequestAsync(MaintenanceRequest maintenanceRequest);
         Task UpdateMaintenanceRequestAsync(MaintenanceRequest maintenanceRequest);
-        Task DeleteMaintenanceRequestAsync(int maintenanceId, int requestId);
-        Task<bool> MaintenanceRequestExistsAsync(int maintenanceId, int requestId);
+        Task DeleteMaintenanceRequestAsync(int id);
+        Task<bool> MaintenanceRequestExistsAsync(int id);
     }
 }

@@ -119,13 +119,13 @@ namespace Hahi.Controllers
                     existingContract.Request.User.Name = userDto.Name;
                     existingContract.Request.User.PhoneNumber = userDto.PhoneNumber;
                     existingContract.Request.User.Address = userDto.Address;
-                    existingContract.Request.User.RoleId = userDto.RoleId;
-
-                    // Assuming you have an Account field in User
                     existingContract.Request.User.Account ??= new Account();
                     existingContract.Request.User.Account.UserName = userDto.UserName;
                     existingContract.Request.User.Account.Email = userDto.Email;
                     existingContract.Request.User.Account.Password = userDto.Password;
+                    existingContract.Request.User.RoleId = userDto.RoleId;
+
+                    // Assuming you have an Account field in User
                 }
 
                 // Update the Sample details in the request
@@ -198,13 +198,12 @@ namespace Hahi.Controllers
                     existingContract.Request.User.Name = userDto.Name;
                     existingContract.Request.User.PhoneNumber = userDto.PhoneNumber;
                     existingContract.Request.User.Address = userDto.Address;
-                    existingContract.Request.User.RoleId = userDto.RoleId;
-
-                    // Assuming you have an Account field in User
                     existingContract.Request.User.Account ??= new Account();
                     existingContract.Request.User.Account.UserName = userDto.UserName;
                     existingContract.Request.User.Account.Email = userDto.Email;
                     existingContract.Request.User.Account.Password = userDto.Password;
+                    existingContract.Request.User.RoleId = userDto.RoleId;
+
                 }
 
                 // Update the Sample details in the request

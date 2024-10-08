@@ -17,18 +17,27 @@ namespace Hahi.Repositories
         public async Task<IEnumerable<MaintenanceRequest>> GetMaintenanceRequestsAsync()
         {
             return await _context.MaintenanceRequests
-                .Include(mr => mr.MaintenanceRequestNavigation) // Use the correct navigation property
+                .Include(mr => mr.MaintenanceRequestNavigation) // Eagerly load related MaintenanceRequestNavigation data
                 .Include(mr => mr.Request)
+                    .ThenInclude(r => r.User)
+                         .ThenInclude(u => u.Account)// Eagerly load related User data within the Request
+                .Include(mr => mr.Request.Design) // Eagerly load Design data within the Request
+                .Include(mr => mr.Request.Sample) // Eagerly load Sample data within the Request
                 .ToListAsync();
         }
 
-        public async Task<MaintenanceRequest?> GetMaintenanceRequestByIdAsync(int maintenanceId, int requestId)
+        public async Task<MaintenanceRequest?> GetMaintenanceRequestByIdAsync(int id)
         {
             return await _context.MaintenanceRequests
-                .Include(mr => mr.MaintenanceRequestNavigation) // Use the correct navigation property
+                .Include(mr => mr.MaintenanceRequestNavigation) // Eagerly load related MaintenanceRequestNavigation data
                 .Include(mr => mr.Request)
-                .FirstOrDefaultAsync(mr => mr.MaintenanceRequestId == maintenanceId && mr.RequestId == requestId);
+                    .ThenInclude(r => r.User)
+                        .ThenInclude(u => u.Account)// Eagerly load related User data within the Request
+                .Include(mr => mr.Request.Design) // Eagerly load Design data within the Request
+                .Include(mr => mr.Request.Sample) // Eagerly load Sample data within the Request
+                .FirstOrDefaultAsync(mr => mr.MaintenanceRequestId == id);
         }
+
 
 
         public async Task AddMaintenanceRequestAsync(MaintenanceRequest maintenanceRequest)
@@ -43,9 +52,9 @@ namespace Hahi.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteMaintenanceRequestAsync(int maintenanceId, int requestId)
+        public async Task DeleteMaintenanceRequestAsync(int id)
         {
-            var maintenanceRequest = await GetMaintenanceRequestByIdAsync(maintenanceId, requestId);
+            var maintenanceRequest = await GetMaintenanceRequestByIdAsync(id);
             if (maintenanceRequest != null)
             {
                 _context.MaintenanceRequests.Remove(maintenanceRequest);
@@ -53,10 +62,10 @@ namespace Hahi.Repositories
             }
         }
 
-        public async Task<bool> MaintenanceRequestExistsAsync(int maintenanceId, int requestId)
+        public async Task<bool> MaintenanceRequestExistsAsync(int id)
         {
             return await _context.MaintenanceRequests
-                .AnyAsync(mr => mr.MaintenanceRequestId == maintenanceId && mr.RequestId == requestId);
+                .AnyAsync(mr => mr.MaintenanceRequestId == id);
         }
     }
 }

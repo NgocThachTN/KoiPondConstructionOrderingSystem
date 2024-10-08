@@ -4,6 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using Hahi.ModelsV1;
 using Hahi.Repositories;
 using Microsoft.AspNetCore.Authorization;
+using Hahi.DTOs;
+using System.Diagnostics.Contracts;
+using Hahi.AutoMapper;
 
 namespace Hahi.Controllers
 {
@@ -13,82 +16,57 @@ namespace Hahi.Controllers
     public class MaintenanceRequestsController : ControllerBase
     {
         private readonly IMaintenanceRequestsRepository _repository;
+        private KoisV1Context _context;
 
-        public MaintenanceRequestsController(IMaintenanceRequestsRepository repository)
+        public MaintenanceRequestsController(IMaintenanceRequestsRepository repository, KoisV1Context context)
         {
             _repository = repository;
+            _context = context;
         }
 
         // GET: api/MaintenanceRequests
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<MaintenanceRequest>>> GetMaintenanceRequests()
+        public async Task<ActionResult<IEnumerable<MaintenanceRequestDto>>> GetMaintenanceRequests()
         {
             var maintenanceRequests = await _repository.GetMaintenanceRequestsAsync();
-            return Ok(maintenanceRequests);
+            var maintenanceRequestDtos = maintenanceRequests.Select(maintenanceRequest => maintenanceRequest.ToMaintenanceDto()).ToList();
+
+            return Ok(maintenanceRequestDtos);
         }
 
         // GET: api/MaintenanceRequests/5/5
-        [HttpGet("{maintenanceId}/{requestId}")]
-        public async Task<ActionResult<MaintenanceRequest>> GetMaintenanceRequest(int maintenanceId, int requestId)
+        [HttpGet("{id}")]
+        public async Task<ActionResult<MaintenanceRequestDto>> GetMaintenanceRequestById(int id)
         {
-            var maintenanceRequest = await _repository.GetMaintenanceRequestByIdAsync(maintenanceId, requestId);
+            var maintenanceRequest = await _repository.GetMaintenanceRequestByIdAsync(id);
 
             if (maintenanceRequest == null)
             {
                 return NotFound();
             }
 
-            return Ok(maintenanceRequest);
+            var maintenanceRequestDto = maintenanceRequest.ToMaintenanceDto();
+            return Ok(maintenanceRequestDto);
         }
 
-        // PUT: api/MaintenanceRequests/5/5
-        [HttpPut("{maintenanceId}/{requestId}")]
-        public async Task<IActionResult> PutMaintenanceRequest(int maintenanceId, int requestId, MaintenanceRequest maintenanceRequest)
-        {
-            if (maintenanceId != maintenanceRequest.MaintenanceRequestId || requestId != maintenanceRequest.RequestId)
-            {
-                return BadRequest();
-            }
-
-            try
-            {
-                await _repository.UpdateMaintenanceRequestAsync(maintenanceRequest);
-            }
-            catch
-            {
-                if (!await _repository.MaintenanceRequestExistsAsync(maintenanceId, requestId))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
 
         // POST: api/MaintenanceRequests
-        [HttpPost]
-        public async Task<ActionResult<MaintenanceRequest>> PostMaintenanceRequest(MaintenanceRequest maintenanceRequest)
+        [HttpPost("ByMaintenanceRequestDesign")]
+        public async Task<ActionResult<MaintenanceRequestDto>> PostMaintenanceByRequestDesign(CreateMaintenanceRequestDesignDto maintenanceRequestDto)
         {
-            await _repository.AddMaintenanceRequestAsync(maintenanceRequest);
-            return CreatedAtAction(nameof(GetMaintenanceRequest), new { maintenanceRequestId = maintenanceRequest.MaintenanceRequestId, requestId = maintenanceRequest.RequestId }, maintenanceRequest);
+            var mainenanceRequest = maintenanceRequestDto.ToMaintenanceRequestDesignFromCreatedDto(); // Using ContractMapper
+            await _repository.AddMaintenanceRequestAsync(mainenanceRequest);
+            var mainenanceResultDto = mainenanceRequest.ToMaintenanceDto();
+            return CreatedAtAction(nameof(GetMaintenanceRequestById), new { id = mainenanceRequest.MaintenanceRequestId }, mainenanceResultDto);
         }
 
-        // DELETE: api/MaintenanceRequests/5/5
-        [HttpDelete("{maintenanceId}/{requestId}")]
-        public async Task<IActionResult> DeleteMaintenanceRequest(int maintenanceId, int requestId)
+        [HttpPost("ByMaintenanceRequestSample")]
+        public async Task<ActionResult<MaintenanceRequestDto>> PostMaintenanceByRequestSample(CreateMaintenanceRequestSampleDto maintenanceRequestDto)
         {
-            var maintenanceRequest = await _repository.GetMaintenanceRequestByIdAsync(maintenanceId, requestId);
-            if (maintenanceRequest == null)
-            {
-                return NotFound();
-            }
-
-            await _repository.DeleteMaintenanceRequestAsync(maintenanceId, requestId);
-            return NoContent();
+            var mainenanceRequest = maintenanceRequestDto.ToMaintenanceRequestSampleFromCreatedDto(); // Using ContractMapper
+            await _repository.AddMaintenanceRequestAsync(mainenanceRequest);
+            var mainenanceResultDto = mainenanceRequest.ToMaintenanceDto();
+            return CreatedAtAction(nameof(GetMaintenanceRequestById), new { id = mainenanceRequest.MaintenanceRequestId }, mainenanceResultDto);
         }
     }
 }

@@ -19,6 +19,7 @@ namespace Hahi.Repositories
             return await _context.Contracts
                 .Include(c => c.Request)
                 .ThenInclude(r => r.User)
+                .ThenInclude(u => u.Account)
                 .Include(c => c.Request)
                 .ThenInclude(r => r.Design)
                 .Include(c => c.Request)
@@ -31,6 +32,7 @@ namespace Hahi.Repositories
             return await _context.Contracts
                 .Include(c => c.Request)
                 .ThenInclude(r => r.User)
+                .ThenInclude(u => u.Account)
                 .Include(c => c.Request)
                 .ThenInclude(r => r.Design)
                 .Include(c => c.Request)

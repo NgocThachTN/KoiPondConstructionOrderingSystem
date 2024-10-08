@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Hahi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ff591ae073e1f25b56d46970063d81ca292300a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f819bd571b9b2cd8382bd2fc2ff8e3b7a010e76")]
 [assembly: System.Reflection.AssemblyProductAttribute("Hahi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Hahi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
