@@ -124,13 +124,20 @@ namespace KoiPond.Controllers
             // Check if a sample with the same ConstructionTypeName already exists
             var existingConstructionType = _context.ConstructionTypes
                 .FirstOrDefault(ct => ct.ConstructionTypeName == sample.ConstructionTypes.First().ConstructionTypeName);
+
             var existingSample = await _context.Samples
                 .FirstOrDefaultAsync(d => d.SampleName == sample.SampleName &&
                                           d.SampleSize == sample.SampleSize &&
                                           d.SamplePrice == sample.SamplePrice &&
                                           d.SampleImage == sample.SampleImage);
 
-            if (existingConstructionType != null && existingSample != null)
+            if (existingSample != null)
+            {
+                // Design already exists, so return a conflict response
+                return Conflict(new { message = $"Design '{existingSample.SampleName}' already exists with ID: {existingSample.SampleId}" });
+            }
+
+            if (existingConstructionType != null)
             {
                 // Optionally, you can return a conflict response if you don't want to create a new sample
                 // return Conflict(new { message = "Sample with this ConstructionTypeName already exists." });
