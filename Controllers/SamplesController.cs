@@ -57,7 +57,7 @@ namespace KoiPond.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateSample([FromRoute] int id, [FromBody] UpdateSampleRequestDto sampleUpdate)
         {
-            // Fetch the design by ID
+            // Fetch the sample by ID
             var sample = await _repository.GetSampleByIdAsync(id);
 
             if (sample == null)
@@ -65,25 +65,37 @@ namespace KoiPond.Controllers
                 return NotFound(new { message = "Sample not found." });
             }
 
-            // Map the incoming DTO to the existing design entity
+            // Map the incoming DTO to the existing sample entity
             sample.SampleName = sampleUpdate.SampleName ?? sample.SampleName;
             sample.SampleSize = sampleUpdate.SampleSize ?? sample.SampleSize;
             sample.SamplePrice = sampleUpdate.SamplePrice ?? sample.SamplePrice;
             sample.SampleImage = sampleUpdate.SampleImage ?? sample.SampleImage;
 
-            // Handle ConstructionTypes (assuming a list, needs handling accordingly)
+            // Handle ConstructionTypes
             if (sampleUpdate.ConstructionTypes != null && sampleUpdate.ConstructionTypes.Count > 0)
             {
-                // Assuming that we're updating the first ConstructionType or implementing a similar logic
-                sample.ConstructionType = new ConstructionType
+                // Fetch existing ConstructionType if it already exists
+                var existingConstructionType = await _context.ConstructionTypes
+                    .FirstOrDefaultAsync(ct => ct.ConstructionTypeName == sampleUpdate.ConstructionTypes.First().ConstructionTypeName);
+
+                if (existingConstructionType != null)
                 {
-                    ConstructionTypeName = sampleUpdate.ConstructionTypes.First().ConstructionTypeName
-                };
+                    // If it exists, assign the existing ConstructionType to the sample
+                    sample.ConstructionType = existingConstructionType;
+                }
+                else
+                {
+                    // If not, create a new ConstructionType
+                    sample.ConstructionType = new ConstructionType
+                    {
+                        ConstructionTypeName = sampleUpdate.ConstructionTypes.First().ConstructionTypeName
+                    };
+                }
             }
 
             try
             {
-                // Update the design using the repository
+                // Update the sample using the repository
                 await _repository.UpdateSampleAsync(sample);
                 // Save changes to the database asynchronously
                 await _context.SaveChangesAsync();
@@ -100,19 +112,50 @@ namespace KoiPond.Controllers
                 }
             }
 
-            // Return the updated design as a DTO
+            // Return the updated sample as a DTO
             return Ok(sample.ToSampleDto());
         }
 
+
         // POST: api/Samples
         [HttpPost]
-        public IActionResult CreateSample([FromBody] CreateSampleRequestDto sample)
+        public async Task<IActionResult> CreateDesign([FromBody] CreateSampleRequestDto sample)
         {
-            var sampleModel = sample.ToSampleFromCreatedDto();
-            _context.Samples.Add(sampleModel);
-            _context.SaveChanges();
-            return CreatedAtAction(nameof(GetSampleById), new { SampleID = sampleModel.SampleId }, sampleModel.ToSampleDto());
+            // Check if a sample with the same ConstructionTypeName already exists
+            var existingConstructionType = _context.ConstructionTypes
+                .FirstOrDefault(ct => ct.ConstructionTypeName == sample.ConstructionTypes.First().ConstructionTypeName);
+            var existingSample = await _context.Samples
+                .FirstOrDefaultAsync(d => d.SampleName == sample.SampleName &&
+                                          d.SampleSize == sample.SampleSize &&
+                                          d.SamplePrice == sample.SamplePrice &&
+                                          d.SampleImage == sample.SampleImage);
+
+            if (existingConstructionType != null && existingSample != null)
+            {
+                // Optionally, you can return a conflict response if you don't want to create a new sample
+                // return Conflict(new { message = "Sample with this ConstructionTypeName already exists." });
+
+                // Alternatively, you can reuse the existing ConstructionType without creating a new one
+                var sampleModel = sample.ToSampleFromCreatedDto();
+                sampleModel.ConstructionType = existingConstructionType; // Link to existing ConstructionType
+
+                _context.Samples.Add(sampleModel);
+                _context.SaveChanges();
+
+                return CreatedAtAction(nameof(GetSampleById), new { SampleID = sampleModel.SampleId }, sampleModel.ToSampleDto());
+            }
+            else
+            {
+                // If no existing ConstructionType, create new sample with new ConstructionType
+                var sampleModel = sample.ToSampleFromCreatedDto();
+
+                _context.Samples.Add(sampleModel);
+                await _context.SaveChangesAsync();
+
+                return CreatedAtAction(nameof(GetSampleById), new { SampleID = sampleModel.SampleId }, sampleModel.ToSampleDto());
+            }
         }
+
 
         // DELETE: api/Samples/5
         [HttpDelete("{id}")]

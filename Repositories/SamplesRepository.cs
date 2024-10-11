@@ -37,7 +37,20 @@ namespace KoiPond.Repositories
 
         public async Task UpdateSampleAsync(Sample sample)
         {
-            _context.Entry(sample).State = EntityState.Modified;
+            var existingSample = await _context.Samples
+                .FirstOrDefaultAsync(s => s.ConstructionType.ConstructionTypeName == sample.ConstructionType.ConstructionTypeName);
+
+            if (existingSample != null)
+            {
+                // Mark the existing sample as modified (without changing the ID)
+                _context.Entry(existingSample).State = EntityState.Modified;
+            }
+            else
+            {
+                // If no record with the same ConstructionTypeName exists, update as usual
+                _context.Entry(sample).State = EntityState.Modified;
+            }
+
             await _context.SaveChangesAsync();
         }
 
