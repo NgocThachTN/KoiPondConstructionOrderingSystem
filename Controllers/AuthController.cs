@@ -6,6 +6,7 @@ using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Swashbuckle.AspNetCore.Filters;
 using KoiPond.Models;
+using Google.Apis.Auth;
 // For async database calls
 
 [ApiController]
@@ -13,11 +14,53 @@ using KoiPond.Models;
 public class AuthController : ControllerBase
 {
     private readonly KoiContext _context;
+    private readonly string _googleClientId;
+    private readonly IConfiguration _configuration;
 
-    public AuthController(KoiContext context)
+    public AuthController(KoiContext context, IConfiguration configuration)
     {
+        _configuration = configuration;
         _context = context;
+        _googleClientId = _configuration["GoogleOAuth:ClientId"];
+
     }
+
+
+
+    [HttpPost("google")]
+    public async Task<IActionResult> GoogleLogin([FromBody] string token)
+    {
+            var payload = await GoogleJsonWebSignature.ValidateAsync(token, new GoogleJsonWebSignature.ValidationSettings
+            {
+                Audience = new[] { _googleClientId }
+
+            });
+            var jwtToken = GenerateJwtToken(payload.Email, payload.Name, payload.Picture);
+
+            return Ok(jwtToken = token);
+    }
+
+    [HttpPost("generate-jwt")]
+    public string GenerateJwtToken(string email, string name, string picture)
+    {
+        var claims = new[]
+        {
+            new Claim(JwtRegisteredClaimNames.Sub, email),
+            new Claim(JwtRegisteredClaimNames.Name, name),
+            new Claim("picture", picture)
+        };
+
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("your_jwt_secret_key_here I hate this coding section please kill yourself now1231231231232"));
+        var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+        var token = new JwtSecurityToken(
+            claims: claims,
+            expires: DateTime.Now.AddHours(2),
+            signingCredentials: creds
+        );
+
+        return new JwtSecurityTokenHandler().WriteToken(token);
+    }
+
 
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginModel login)
@@ -120,6 +163,8 @@ public class LoginModel
 {
     public string Email { get; set; }
     public string Password { get; set; }
+
+
 }
 
 public class SignupModel

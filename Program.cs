@@ -115,6 +115,9 @@ builder.Services.AddAuthorization(options =>
 
 var app = builder.Build();
 
+var googleClientId = "379039610510-8sspg63b8kid07buvsge7kcipivjc7vq.apps.googleusercontent.com\r\n";
+
+
 // Configure the HTTP request pipeline.
 
     app.UseSwagger();
