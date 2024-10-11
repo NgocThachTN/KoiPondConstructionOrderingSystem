@@ -1,5 +1,4 @@
 ﻿
-
 using KoiPond.DTOs;
 using KoiPond.Models;
 
@@ -16,13 +15,14 @@ namespace KoiPond.AutoMapper
 
             return new AccountDto
             {
-                UserName = account.User.Account?.UserName,
-                Email = account.User.Account?.Email,
-                Password = account.User.Account?.Password,
-                Name = account.User.Name,
-                PhoneNumber = account.User.PhoneNumber,
-                Address = account.User.Address,
-                RoleId = account.User.RoleId,
+                AccountId = account.AccountId,
+                UserName = account.UserName,
+                Email = account.Email,
+                Password = account.Password,
+                Name = account.User?.Name ?? string.Empty,
+                PhoneNumber = account.User?.PhoneNumber ?? string.Empty,
+                Address = account.User?.Address ?? string.Empty,
+                RoleId = account.User?.RoleId ?? 1 // Default RoleId to 1 if null
             };
         }
 
@@ -30,6 +30,7 @@ namespace KoiPond.AutoMapper
         {
             return new Account
             {
+                AccountId = accountDto.AccountId,
                 UserName = accountDto.UserName,
                 Email = accountDto.Email,
                 Password = accountDto.Password,

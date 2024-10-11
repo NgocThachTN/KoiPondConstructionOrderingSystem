@@ -1,5 +1,4 @@
-﻿
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using KoiPond.Models;
@@ -29,21 +28,20 @@ namespace KoiPond.Controllers
         public async Task<ActionResult<IEnumerable<AccountDto>>> GetAccounts()
         {
             var accounts = await _repository.GetAccounts()
+                                            .Include(a => a.User) // Ensure related User data is loaded
                                             .Where(account => account.User != null)
                                             .ToListAsync();
 
-            var requestDtos = accounts.Select(account => account.ToAccountDto())
+            var accountDtos = accounts.Select(account => account.ToAccountDto())
                                       .Where(dto => dto != null)
                                       .ToList();
 
-            return Ok(requestDtos);
+            return Ok(accountDtos);
         }
-
-
 
         // GET: api/Accounts/5
         [HttpGet("{AccountId}")]
-        public async Task<ActionResult<Account>> GetAccountById(int AccountId)
+        public async Task<ActionResult<AccountDto>> GetAccountById(int AccountId)
         {
             var account = await _repository.GetAccountByIdAsync(AccountId);
 
@@ -61,6 +59,7 @@ namespace KoiPond.Controllers
                 return NotFound(new { message = ex.Message }); // Return NotFound if Account is null
             }
         }
+
 
         // PUT: api/Accounts/5
         [HttpPut("{id}")]
@@ -101,7 +100,7 @@ namespace KoiPond.Controllers
 
         // POST: api/Accounts
         [HttpPost]
-        [Authorize(Roles = "Manager")]
+        [Authorize]
         [HttpPost]
         public IActionResult CreateAccount([FromBody] CreateAccountRequestDto account)
         {
@@ -133,57 +132,4 @@ namespace KoiPond.Controllers
             return BadRequest(new { message = "Failed to delete account." });
         }
     }
-
-    //[SwaggerRequestExample(typeof(Account), typeof(AccountExample))]
-    /*        public class AccountExample : Swashbuckle.AspNetCore.Filters.IExamplesProvider<Account>
-            {
-                public Account GetExamples()
-                {
-                    return new Account
-                    {
-                        AccountId = 0,
-                        UserName = "manager_user",
-                        Email = "manager@example.com",
-                        Password = "Password123",
-                        User = new User
-                        {
-                            UserId = 0,
-                            Name = "Manager Name",
-                            PhoneNumber = "123456789",
-                            Address = "123 Manager St",
-                            RoleId = 1, 
-                            Requests = new List<Request>
-                    {
-                        new Request
-                        {
-                            RequestId = 0,
-                            RequestName = "Sample Request",
-                            Description = "Sample Description",
-                            SampleId = 0,
-                            DesignId = 0,
-                            Contract = new Contract
-                            {
-                                ContractId = 0,
-                                ContractName = "Sample Contract",
-                                StartDate = DateTime.UtcNow,
-                                EndDate = DateTime.UtcNow.AddDays(30),
-                                Status = "Active"
-                            },
-                            MaintenanceRequests = new List<MaintenanceRequest>
-                            {
-                                new MaintenanceRequest
-                                {
-                                    MaintenanceId = 0,
-                                    Status = "In Progress",
-                                    StartDate = DateTime.UtcNow,
-                                    EndDate = DateTime.UtcNow.AddDays(7)
-                                }
-                            }
-                        }
-                    }
-                        }
-                    };
-                }
-            }*/
 }
-
