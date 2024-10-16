@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KoiPond")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a343cc12f3f6f795be7eb759531d5eb6ad1d2009")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d67e0bacdde175f67720d863612a0445b11af61")]
 [assembly: System.Reflection.AssemblyProductAttribute("KoiPond")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KoiPond")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
