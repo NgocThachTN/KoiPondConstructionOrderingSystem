@@ -43,10 +43,18 @@ namespace Hahi.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task UpdateRequestAsync(Request request)
+        public async Task<bool> UpdateRequestAsync(Request request)
         {
-            _context.Entry(request).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
+            try
+            {
+                _context.Requests.Update(request);
+                await _context.SaveChangesAsync();
+                return true; // Return true to indicate success
+            }
+            catch
+            {
+                return false; // Return false to indicate failure
+            }
         }
 
         public async Task<bool> DeleteRequestAsync(int id)

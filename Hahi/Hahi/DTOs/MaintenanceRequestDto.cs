@@ -4,6 +4,7 @@
     {
         public List<RequestDto> Requests { get; set; }
         public List<MaintenanceDto> Maintenance { get; set; }
+        public int MaintenanceRequestId { get; set; }
         public DateTime? MaintenanceRequestStartDate { get; set; }
         public DateTime? MaintenanceRequestEndDate { get; set; }
         public string? Status { get; set; }

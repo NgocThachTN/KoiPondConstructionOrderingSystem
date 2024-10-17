@@ -168,7 +168,7 @@ namespace Hahi.ModelsV1
                 entity.HasOne(d => d.Request)
                     .WithMany(p => p.MaintenanceRequests)
                     .HasForeignKey(d => d.RequestId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK__Maintenan__Reque__2C3393D0");
             });
 

@@ -48,6 +48,50 @@ namespace Hahi.Controllers
             return Ok(requestDto);
         }
 
+
+        // POST: api/Requests/ByDesign
+        [HttpPost("ByDesign")]
+        public async Task<ActionResult<RequestDto>> PostRequestByDesign(CreateRequestDesignDto requestDto)
+        {
+            if (!requestDto.IsDesignSelected)
+            {
+                return BadRequest("Design must be selected for this endpoint.");
+            }
+
+            var (request, errorMessage) = await requestDto.ToRequestDesignFromCreatedDto(_context);
+
+            if (request == null)
+            {
+                return BadRequest(errorMessage); // Return the specific error message if validation fails
+            }
+
+            await _repository.AddRequestAsync(request);
+            var requestResultDto = request.ToRequestDto(); // Using RequestMapper
+            return CreatedAtAction(nameof(GetRequest), new { id = request.RequestId }, requestResultDto);
+        }
+
+
+        // POST: api/Requests/BySample
+        [HttpPost("BySample")]
+        public async Task<ActionResult<RequestDto>> PostRequestBySample(CreateRequestSampleDto requestDto)
+        {
+            if (!requestDto.IsSampleSelected)
+            {
+                return BadRequest("Sample must be selected for this endpoint.");
+            }
+
+            var (request, errorMessage) = await requestDto.ToRequestSampleFromCreatedDtoAsync(_context);
+
+            if (request == null)
+            {
+                return BadRequest(errorMessage); // Return the specific error message if validation fails
+            }
+
+            await _repository.AddRequestAsync(request);
+            var requestResultDto = request.ToRequestDto(); // Using RequestMapper
+            return CreatedAtAction(nameof(GetRequest), new { id = request.RequestId }, requestResultDto);
+        }
+
         // PUT: api/Requests/ByDesign/5
         [HttpPut("ByDesign/{id}")]
         public async Task<ActionResult<RequestDto>> PutRequestByDesign(int id, UpdateRequestDesignDto requestDto)
@@ -58,33 +102,34 @@ namespace Hahi.Controllers
                 return NotFound("Request not found.");
             }
 
+            // Update the Request details
             existingRequest.RequestName = requestDto.RequestName;
             existingRequest.Description = requestDto.Description;
 
-            // Update the User and Account information
-            existingRequest.User ??= new User();
-            existingRequest.User.Name = requestDto.User.Name;
-            existingRequest.User.PhoneNumber = requestDto.User.PhoneNumber;
-            existingRequest.User.Address = requestDto.User.Address;
-            existingRequest.User.Account ??= new Account();
-            existingRequest.User.Account.UserName = requestDto.User.UserName;
-            existingRequest.User.Account.Email = requestDto.User.Email;
-            existingRequest.User.Account.Password = requestDto.User.Password;
-            existingRequest.User.RoleId = requestDto.User.RoleId;
-
-            if (requestDto.Design != null)
+            // Update the User and Account information without creating a new User
+            if (existingRequest.User != null)
             {
-                existingRequest.Design = new Design
+                existingRequest.User.Name = requestDto.User.Name;
+                existingRequest.User.PhoneNumber = requestDto.User.PhoneNumber;
+                existingRequest.User.Address = requestDto.User.Address;
+
+                if (existingRequest.User.Account != null)
                 {
-                    ConstructionType = new ConstructionType
-                    {
-                        ConstructionTypeName = requestDto.Design.ConstructionTypeName
-                    },
-                    DesignName = requestDto.Design.DesignName,
-                    DesignSize = requestDto.Design.DesignSize,
-                    DesignPrice = requestDto.Design.DesignPrice,
-                    DesignImage = requestDto.Design.DesignImage
-                };
+                    existingRequest.User.Account.UserName = requestDto.User.UserName;
+                    existingRequest.User.Account.Email = requestDto.User.Email;
+                    existingRequest.User.Account.Password = requestDto.User.Password;
+                }
+
+                existingRequest.User.RoleId = requestDto.User.RoleId;
+            }
+
+            // Update the Design information without creating a new Design
+            if (existingRequest.Design != null && requestDto.Design != null)
+            {
+                existingRequest.Design.DesignName = requestDto.Design.DesignName;
+                existingRequest.Design.DesignSize = requestDto.Design.DesignSize;
+                existingRequest.Design.DesignPrice = requestDto.Design.DesignPrice;
+                existingRequest.Design.DesignImage = requestDto.Design.DesignImage;
             }
 
             await _repository.UpdateRequestAsync(existingRequest);
@@ -106,31 +151,30 @@ namespace Hahi.Controllers
             existingRequest.RequestName = requestDto.RequestName;
             existingRequest.Description = requestDto.Description;
 
-            // Update the User and Account information
-            existingRequest.User ??= new User();
-            existingRequest.User.Name = requestDto.User.Name;
-            existingRequest.User.PhoneNumber = requestDto.User.PhoneNumber;
-            existingRequest.User.Address = requestDto.User.Address;
-            existingRequest.User.Account ??= new Account();
-            existingRequest.User.Account.UserName = requestDto.User.UserName;
-            existingRequest.User.Account.Email = requestDto.User.Email;
-            existingRequest.User.Account.Password = requestDto.User.Password;
-            existingRequest.User.RoleId = requestDto.User.RoleId;
-
-            // Update Sample information
-            if (requestDto.Sample != null)
+            // Update the User and Account information without creating a new User
+            if (existingRequest.User != null)
             {
-                existingRequest.Sample = new Sample
+                existingRequest.User.Name = requestDto.User.Name;
+                existingRequest.User.PhoneNumber = requestDto.User.PhoneNumber;
+                existingRequest.User.Address = requestDto.User.Address;
+
+                if (existingRequest.User.Account != null)
                 {
-                    ConstructionType = new ConstructionType
-                    {
-                        ConstructionTypeName = requestDto.Sample.ConstructionTypeName
-                    },
-                    SampleName = requestDto.Sample.SampleName,
-                    SampleSize = requestDto.Sample.SampleSize,
-                    SamplePrice = requestDto.Sample.SamplePrice,
-                    SampleImage = requestDto.Sample.SampleImage
-                };
+                    existingRequest.User.Account.UserName = requestDto.User.UserName;
+                    existingRequest.User.Account.Email = requestDto.User.Email;
+                    existingRequest.User.Account.Password = requestDto.User.Password;
+                }
+
+                existingRequest.User.RoleId = requestDto.User.RoleId;
+            }
+
+            // Update Sample information without creating a new Sample
+            if (existingRequest.Sample != null && requestDto.Sample != null)
+            {
+                existingRequest.Sample.SampleName = requestDto.Sample.SampleName;
+                existingRequest.Sample.SampleSize = requestDto.Sample.SampleSize;
+                existingRequest.Sample.SamplePrice = requestDto.Sample.SamplePrice;
+                existingRequest.Sample.SampleImage = requestDto.Sample.SampleImage;
             }
 
             // Update the request in the database
@@ -140,36 +184,6 @@ namespace Hahi.Controllers
             return Ok(requestResultDto);
         }
 
-
-        // POST: api/Requests/ByDesign
-        [HttpPost("ByDesign")]
-        public async Task<ActionResult<RequestDto>> PostRequestByDesign(CreateRequestDesignDto requestDto)
-        {
-            if (!requestDto.IsDesignSelected)
-            {
-                return BadRequest("Design must be selected for this endpoint.");
-            }
-
-            var request = requestDto.ToRequestDesignFromCreatedDto();
-            await _repository.AddRequestAsync(request);
-            var requestResultDto = request.ToRequestDto(); // Using RequestMapper
-            return CreatedAtAction(nameof(GetRequest), new { id = request.RequestId }, requestResultDto);
-        }
-
-        // POST: api/Requests/BySample
-        [HttpPost("BySample")]
-        public async Task<ActionResult<RequestDto>> PostRequestBySample(CreateRequestSampleDto requestDto)
-        {
-            if (!requestDto.IsSampleSelected)
-            {
-                return BadRequest("Sample must be selected for this endpoint.");
-            }
-
-            var request = requestDto.ToRequestSampleFromCreatedDto();
-            await _repository.AddRequestAsync(request);
-            var requestResultDto = request.ToRequestDto(); // Using RequestMapper
-            return CreatedAtAction(nameof(GetRequest), new { id = request.RequestId }, requestResultDto);
-        }
 
         // DELETE: api/Requests/ByDesign/5
         [HttpDelete("ByDesign/{id}")]
@@ -186,8 +200,20 @@ namespace Hahi.Controllers
                 return BadRequest("This request does not have a design associated with it.");
             }
 
-            var result = await _repository.DeleteRequestAsync(id);
-            if (!result)
+            // Disassociate the Design before deleting the Request
+            existingRequest.DesignId = null; // Set the foreign key to null
+            existingRequest.Design = null; // Set the navigation property to null
+
+            // Save the changes to update the database
+            var updateResult = await _repository.UpdateRequestAsync(existingRequest);
+            if (!updateResult)
+            {
+                return StatusCode(500, "Error updating the request to disassociate the design.");
+            }
+
+            // Proceed with the deletion
+            var deleteResult = await _repository.DeleteRequestAsync(id);
+            if (!deleteResult)
             {
                 return StatusCode(500, "Error deleting the request.");
             }
@@ -195,6 +221,7 @@ namespace Hahi.Controllers
             var requestDto = existingRequest.ToRequestDto(); // Using RequestMapper
             return Ok(requestDto);
         }
+
 
         // DELETE: api/Requests/BySample/5
         [HttpDelete("BySample/{id}")]
@@ -211,8 +238,20 @@ namespace Hahi.Controllers
                 return BadRequest("This request does not have a sample associated with it.");
             }
 
-            var result = await _repository.DeleteRequestAsync(id);
-            if (!result)
+            // Disassociate the Design before deleting the Request
+            existingRequest.SampleId = null; // Set the foreign key to null
+            existingRequest.Sample = null; // Set the navigation property to null
+
+            // Save the changes to update the database
+            var updateResult = await _repository.UpdateRequestAsync(existingRequest);
+            if (!updateResult)
+            {
+                return StatusCode(500, "Error updating the request to disassociate the sample.");
+            }
+
+            // Proceed with the deletion
+            var deleteResult = await _repository.DeleteRequestAsync(id);
+            if (!deleteResult)
             {
                 return StatusCode(500, "Error deleting the request.");
             }

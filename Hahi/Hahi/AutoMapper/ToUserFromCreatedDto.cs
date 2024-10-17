@@ -16,6 +16,7 @@ namespace Hahi.AutoMapper
 
             return new UserDto
             {
+                UserId = user.UserId,
                 UserName = user.Account.UserName,
                 Email = user.Account.Email,
                 Password = user.Account.Password,

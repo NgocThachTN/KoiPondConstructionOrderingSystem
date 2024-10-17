@@ -4,6 +4,8 @@ namespace Hahi.DTOs
 {
     public class UserDto
     {
+        public int UserId { get; set; }
+        public int? AccountId { get; set; }
         public string Name { get; set; }
         public string PhoneNumber { get; set; }
         public string Address { get; set; }
@@ -13,3 +15,4 @@ namespace Hahi.DTOs
         public int RoleId { get; set; } = 1;
     }
 }
+

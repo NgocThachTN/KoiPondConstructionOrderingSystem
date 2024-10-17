@@ -17,42 +17,16 @@ namespace Hahi.Repositories
 
         public IQueryable<Account> GetAccounts()
         {
-            return _context.Accounts
-                .Include(a => a.User)
-                    .ThenInclude(u => u.Requests)
-                        .ThenInclude(r => r.Design)
-                           .ThenInclude(k => k.ConstructionType)
-                .Include(a => a.User)
-                    .ThenInclude(u => u.Requests)
-                        .ThenInclude(r => r.Sample)
-                          .ThenInclude(k => k.ConstructionType)
-                .Include(a => a.User)
-                    .ThenInclude(u => u.Requests)
-                        .ThenInclude(r => r.Contract)
-                .Include(a => a.User)
-                    .ThenInclude(u => u.Requests)
-                        .ThenInclude(r => r.MaintenanceRequests);
+            return _context.Accounts.Include(a => a.User); // Use Include to fetch related User data
         }
 
-        public async Task<Account?> GetAccountByIdAsync(int id)
+        public async Task<Account> GetAccountByIdAsync(int accountId)
         {
             return await _context.Accounts
-                .Include(a => a.User)
-                    .ThenInclude(u => u.Requests)
-                        .ThenInclude(r => r.Design)
-                           .ThenInclude(d => d.ConstructionType)
-                .Include(a => a.User)
-                    .ThenInclude(u => u.Requests)
-                        .ThenInclude(r => r.Sample)
-                           .ThenInclude(s => s.ConstructionType)
-                .Include(a => a.User)
-                    .ThenInclude(u => u.Requests)
-                        .ThenInclude(r => r.Contract)
-                .Include(a => a.User)
-                    .ThenInclude(u => u.Requests)
-                        .ThenInclude(r => r.MaintenanceRequests)
-                .FirstOrDefaultAsync(a => a.AccountId == id);
+                                 .Include(a => a.User) // Ensure User data is included
+                                 .FirstOrDefaultAsync(a => a.AccountId == accountId);
         }
+
 
 
         public async Task AddAccountAsync(Account account)
@@ -69,21 +43,28 @@ namespace Hahi.Repositories
 
         public async Task<bool> DeleteAccountAsync(int id)
         {
-            // Tìm tài khoản theo ID
+            // Find the account by ID
             var account = await GetAccountByIdAsync(id);
 
-            // Nếu tài khoản không tồn tại, trả về false
+            // If the account does not exist, return false
             if (account == null)
             {
                 return false;
             }
 
-            // Tiến hành xóa tài khoản và lưu thay đổi
+            // Find the related User and remove it before deleting the Account
+            if (account.User != null)
+            {
+                _context.Users.Remove(account.User);
+            }
+
+            // Remove the account and save changes
             _context.Accounts.Remove(account);
             await _context.SaveChangesAsync();
 
             return true;
         }
+
 
         public async Task<bool> AccountExistsAsync(int id)
         {

@@ -36,7 +36,20 @@ namespace Hahi.Repositories
 
         public async Task UpdateDesignAsync(Design design)
         {
-            _context.Entry(design).State = EntityState.Modified;
+            var existingdesign = await _context.Designs
+                            .FirstOrDefaultAsync(s => s.ConstructionType.ConstructionTypeName == design.ConstructionType.ConstructionTypeName);
+
+            if (existingdesign != null)
+            {
+                // Mark the existing sample as modified (without changing the ID)
+                _context.Entry(existingdesign).State = EntityState.Modified;
+            }
+            else
+            {
+                // If no record with the same ConstructionTypeName exists, update as usual
+                _context.Entry(design).State = EntityState.Modified;
+            }
+
             await _context.SaveChangesAsync();
         }
 

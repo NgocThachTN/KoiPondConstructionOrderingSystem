@@ -54,11 +54,57 @@ namespace Hahi.Controllers
             }
         }
 
+        // POST: api/Designs
+        [HttpPost]
+        public async Task<IActionResult> CreateDesign([FromBody] CreateDesignRequestDto designDto)
+        {
+            // Check if the ConstructionType already exists with the same name
+            var existingConstructionType = await _context.ConstructionTypes
+                .FirstOrDefaultAsync(ct => ct.ConstructionTypeName == designDto.ConstructionTypes.First().ConstructionTypeName);
+
+            if (existingConstructionType != null)
+            {
+                // ConstructionType already exists, so return a conflict response
+                return Conflict(new { message = $"ConstructionType '{existingConstructionType.ConstructionTypeName}' already exists with ID: {existingConstructionType.ConstructionTypeId}" });
+            }
+
+            // Check if the Design already exists with the same data
+            var existingDesign = await _context.Designs
+                .FirstOrDefaultAsync(d => d.DesignName == designDto.DesignName &&
+                                          d.DesignSize == designDto.DesignSize &&
+                                          d.DesignPrice == designDto.DesignPrice &&
+                                          d.DesignImage == designDto.DesignImage);
+
+            if (existingDesign != null)
+            {
+                // Design already exists, so return a conflict response
+                return Conflict(new { message = $"Design '{existingDesign.DesignName}' already exists with ID: {existingDesign.DesignId}" });
+            }
+
+            // If both ConstructionType and Design do not exist, proceed to create them
+            var constructionType = new ConstructionType
+            {
+                ConstructionTypeName = designDto.ConstructionTypes.First().ConstructionTypeName
+            };
+
+            _context.ConstructionTypes.Add(constructionType);
+            await _context.SaveChangesAsync(); // Save to generate the new ConstructionTypeId
+
+            // Create the new Design
+            var designModel = designDto.ToDesignFromCreatedDto();
+            designModel.ConstructionTypeId = constructionType.ConstructionTypeId; // Set the correct ConstructionTypeId
+            _context.Designs.Add(designModel);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(nameof(GetDesignById), new { DesignID = designModel.DesignId }, designModel.ToDesignDto());
+        }
+
+
         // PUT: api/Designs/5
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateDesign([FromRoute] int id, [FromBody] UpdateDesignRequestDto designUpdate)
         {
-            // Fetch the design by ID
+            // Fetch the sample by ID
             var design = await _repository.GetDesignByIdAsync(id);
 
             if (design == null)
@@ -66,25 +112,37 @@ namespace Hahi.Controllers
                 return NotFound(new { message = "Design not found." });
             }
 
-            // Map the incoming DTO to the existing design entity
+            // Map the incoming DTO to the existing sample entity
             design.DesignName = designUpdate.DesignName ?? design.DesignName;
             design.DesignSize = designUpdate.DesignSize ?? design.DesignSize;
             design.DesignPrice = designUpdate.DesignPrice ?? design.DesignPrice;
             design.DesignImage = designUpdate.DesignImage ?? design.DesignImage;
 
-            // Handle ConstructionTypes (assuming a list, needs handling accordingly)
+            // Handle ConstructionTypes
             if (designUpdate.ConstructionTypes != null && designUpdate.ConstructionTypes.Count > 0)
             {
-                // Assuming that we're updating the first ConstructionType or implementing a similar logic
-                design.ConstructionType = new ConstructionType
+                // Fetch existing ConstructionType if it already exists
+                var existingConstructionType = await _context.ConstructionTypes
+                    .FirstOrDefaultAsync(ct => ct.ConstructionTypeName == designUpdate.ConstructionTypes.First().ConstructionTypeName);
+
+                if (existingConstructionType != null)
                 {
-                    ConstructionTypeName = designUpdate.ConstructionTypes.First().ConstructionTypeName
-                };
+                    // If it exists, assign the existing ConstructionType to the sample
+                    design.ConstructionType = existingConstructionType;
+                }
+                else
+                {
+                    // If not, create a new ConstructionType
+                    design.ConstructionType = new ConstructionType
+                    {
+                        ConstructionTypeName = designUpdate.ConstructionTypes.First().ConstructionTypeName
+                    };
+                }
             }
 
             try
             {
-                // Update the design using the repository
+                // Update the sample using the repository
                 await _repository.UpdateDesignAsync(design);
                 // Save changes to the database asynchronously
                 await _context.SaveChangesAsync();
@@ -101,21 +159,10 @@ namespace Hahi.Controllers
                 }
             }
 
-            // Return the updated design as a DTO
+            // Return the updated sample as a DTO
             return Ok(design.ToDesignDto());
         }
 
-
-
-        // POST: api/Designs
-        [HttpPost]
-        public IActionResult CreateDesign([FromBody] CreateDesignRequestDto design)
-        {
-            var designModel = design.ToDesignFromCreatedDto();
-            _context.Designs.Add(designModel);
-            _context.SaveChanges();
-            return CreatedAtAction(nameof(GetDesignById), new { DesignID = designModel.DesignId }, designModel.ToDesignDto());
-        }
 
         // DELETE: api/Designs/5
         [HttpDelete("{id}")]

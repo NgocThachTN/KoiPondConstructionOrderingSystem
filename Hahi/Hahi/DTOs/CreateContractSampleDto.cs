@@ -3,6 +3,7 @@
     public class CreateContractSampleDto
     {
         public List<RequestSampleDto> Requests { get; set; } // Use a specific DTO for sample
+        public int ContractId { get; set; }
         public string? ContractName { get; set; }
         public DateTime? ContractStartDate { get; set; }
         public DateTime? ContractEndDate { get; set; }

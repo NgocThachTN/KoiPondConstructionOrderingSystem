@@ -10,6 +10,7 @@ namespace Hahi.AutoMapper
         {
             return new MaintenanceRequestDto
             {
+                MaintenanceRequestId = maintenanceRequest.MaintenanceRequestId,
                 MaintenanceRequestStartDate = maintenanceRequest.MaintenanceRequestStartDate,
                 MaintenanceRequestEndDate = maintenanceRequest.MaintenanceRequestEndDate,
                 Status = maintenanceRequest.Status,
@@ -39,10 +40,14 @@ namespace Hahi.AutoMapper
                 {
                     new UserDto
                     {
+                        UserId = request.User.UserId,
                         Name = request.User.Name,
                         PhoneNumber = request.User.PhoneNumber,
                         Address = request.User.Address,
-                        RoleId = request.User.RoleId
+                        RoleId = request.User.RoleId,
+                        UserName = request.User.Account?.UserName,
+                        Email = request.User.Account?.Email,
+                        Password = request.User.Account?.Password
                     }
                 } : new List<UserDto>(),
 
@@ -51,6 +56,7 @@ namespace Hahi.AutoMapper
                     new DesignDtoV1
                     {
                         ConstructionTypeName = request.Design.ConstructionType?.ConstructionTypeName,
+                        DesignId = request.Design.DesignId,
                         DesignName = request.Design.DesignName,
                         DesignSize = request.Design.DesignSize,
                         DesignPrice = request.Design.DesignPrice,
@@ -63,6 +69,7 @@ namespace Hahi.AutoMapper
                     new SampleDtoV1
                     {
                         ConstructionTypeName = request.Sample.ConstructionType?.ConstructionTypeName,
+                        SampleId = request.Sample.SampleId,
                         SampleName = request.Sample.SampleName,
                         SampleSize = request.Sample.SampleSize,
                         SamplePrice = request.Sample.SamplePrice,
@@ -72,74 +79,87 @@ namespace Hahi.AutoMapper
             };
         }
 
-        public static MaintenanceRequest ToMaintenanceRequestDesignFromCreatedDto(this CreateMaintenanceRequestDesignDto requestDto)
+        public static MaintenanceRequest ToMaintenanceRequestDesignFromCreatedDto(this CreateMaintenanceRequestDesignDto requestDto, Request existingRequest, User existingUser, Design existingDesign, Maintenance existingMaintenance)
         {
             var maintenanceRequest = new MaintenanceRequest
             {
+                MaintenanceRequestId = requestDto.MaintenanceRequestId,
                 MaintenanceRequestStartDate = requestDto.MaintenanceRequestStartDate,
                 MaintenanceRequestEndDate = requestDto.MaintenanceRequestEndDate,
                 Status = requestDto.Status,
-                Request = requestDto.Requests != null && requestDto.Requests.Count > 0
-                    ? new Request
+                Request = existingRequest ?? new Request
+                {
+                    RequestId = requestDto.Requests.First().RequestId,
+                    RequestName = requestDto.Requests.First().RequestName,
+                    Description = requestDto.Requests.First().Description,
+                    User = existingUser ?? new User
                     {
-                        RequestName = requestDto.Requests.First().RequestName,
-                        Description = requestDto.Requests.First().Description,
-                        User = requestDto.Requests.First().Users != null && requestDto.Requests.First().Users.Count > 0
-                            ? new User
-                            {
-                                Name = requestDto.Requests.First().Users.First().Name,
-                                PhoneNumber = requestDto.Requests.First().Users.First().PhoneNumber,
-                                Address = requestDto.Requests.First().Users.First().Address,
-                                RoleId = requestDto.Requests.First().Users.First().RoleId
-                            }
-                            : null,
-
-                        Design = requestDto.Requests.First().Designs != null && requestDto.Requests.First().Designs.Count > 0
-                            ? new Design
-                            {
-                                DesignName = requestDto.Requests.First().Designs.First().DesignName,
-                                DesignSize = requestDto.Requests.First().Designs.First().DesignSize,
-                                DesignPrice = requestDto.Requests.First().Designs.First().DesignPrice,
-                                DesignImage = requestDto.Requests.First().Designs.First().DesignImage
-                            }
-                            : null
+                        UserId = requestDto.Requests.First().Users.First().UserId,
+                        Name = requestDto.Requests.First().Users.First().Name,
+                        PhoneNumber = requestDto.Requests.First().Users.First().PhoneNumber,
+                        Address = requestDto.Requests.First().Users.First().Address,
+                        Account = new Account
+                        {
+                            UserName = requestDto.Requests.First().Users.First().UserName,
+                            Email = requestDto.Requests.First().Users.First().Email,
+                            Password = requestDto.Requests.First().Users.First().Password
+                        },
+                        RoleId = requestDto.Requests.First().Users.First().RoleId
+                    },
+                    Design = existingDesign ?? new Design
+                    {
+                        DesignId = requestDto.Requests.First().Designs.First().DesignId,
+                        DesignName = requestDto.Requests.First().Designs.First().DesignName,
+                        DesignSize = requestDto.Requests.First().Designs.First().DesignSize,
+                        DesignPrice = requestDto.Requests.First().Designs.First().DesignPrice,
+                        DesignImage = requestDto.Requests.First().Designs.First().DesignImage
                     }
-                    : null,
-        MaintenanceRequestNavigation = requestDto.Maintenance != null && requestDto.Maintenance.Count > 0
-            ? new Maintenance
-            {
-                MaintencaceName = requestDto.Maintenance.First().MaintencaceName
-            }
-            : null
+                },
+                MaintenanceRequestNavigation = existingMaintenance ?? new Maintenance
+                {
+                    MaintencaceName = requestDto.Maintenance.First().MaintencaceName
+                }
             };
+
             return maintenanceRequest;
         }
 
 
-        public static MaintenanceRequest ToMaintenanceRequestSampleFromCreatedDto(this CreateMaintenanceRequestSampleDto requestDto)
+
+        public static MaintenanceRequest ToMaintenanceRequestSampleFromCreatedDto(this CreateMaintenanceRequestSampleDto requestDto, Request existingRequest, User existingUser, Sample existingSample, Maintenance existingMaintenance)
         {
             var maintenanceRequest = new MaintenanceRequest
             {
+                MaintenanceRequestId = requestDto.MaintenanceRequestId,
                 MaintenanceRequestStartDate = requestDto.MaintenanceRequestStartDate,
                 MaintenanceRequestEndDate = requestDto.MaintenanceRequestEndDate,
                 Status = requestDto.Status,
                 Request = requestDto.Requests != null && requestDto.Requests.Count > 0 ?
                     new Request
                     {
+                        RequestId = requestDto.Requests.First().RequestId,
                         RequestName = requestDto.Requests.First().RequestName,
                         Description = requestDto.Requests.First().Description,
                         User = requestDto.Requests.First().Users != null && requestDto.Requests.First().Users.Count > 0 ?
                             new User
                             {
+                                UserId = requestDto.Requests.First().Users.First().UserId,
                                 Name = requestDto.Requests.First().Users.First().Name,
                                 PhoneNumber = requestDto.Requests.First().Users.First().PhoneNumber,
                                 Address = requestDto.Requests.First().Users.First().Address,
+                                Account = new Account
+                                {
+                                    UserName = requestDto.Requests.First().Users.First().UserName,
+                                    Email = requestDto.Requests.First().Users.First().Email,
+                                    Password = requestDto.Requests.First().Users.First().Password
+                                },
                                 RoleId = requestDto.Requests.First().Users.First().RoleId
                             } : null,
 
                         Sample = requestDto.Requests.First().Samples != null && requestDto.Requests.First().Samples.Count > 0 ?
                             new Sample
                             {
+                                SampleId = requestDto.Requests.First().Samples.First().SampleId,
                                 SampleName = requestDto.Requests.First().Samples.First().SampleName,
                                 SampleSize = requestDto.Requests.First().Samples.First().SampleSize,
                                 SamplePrice = requestDto.Requests.First().Samples.First().SamplePrice,

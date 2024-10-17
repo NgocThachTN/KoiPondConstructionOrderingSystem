@@ -9,7 +9,9 @@ namespace Hahi.AutoMapper
         {
             return new DesignDtoV1
             {
-                ConstructionTypeName = design.ConstructionType?.ConstructionTypeName, 
+                ConstructionTypeId = design.ConstructionTypeId,
+                ConstructionTypeName = design.ConstructionType?.ConstructionTypeName,
+                DesignId = design.DesignId,
                 DesignName = design.DesignName,
                 DesignSize = design.DesignSize,
                 DesignPrice = design.DesignPrice,
@@ -21,6 +23,7 @@ namespace Hahi.AutoMapper
         {
             var design = new Design
             {
+                DesignId = designDto.DesignId,
                 DesignName = designDto.DesignName,
                 DesignSize = designDto.DesignSize,
                 DesignPrice = designDto.DesignPrice,
@@ -29,11 +32,11 @@ namespace Hahi.AutoMapper
                 ConstructionType = designDto.ConstructionTypes != null && designDto.ConstructionTypes.Count > 0
                     ? new ConstructionType
                     {
+                        ConstructionTypeId = designDto.ConstructionTypes.First().ConstructionTypeId,
                         ConstructionTypeName = designDto.ConstructionTypes.First().ConstructionTypeName
                     }
                     : null
             };
-
             return design;
         }
     }

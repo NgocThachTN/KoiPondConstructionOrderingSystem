@@ -31,21 +31,20 @@ namespace Hahi.Controllers
         public async Task<ActionResult<IEnumerable<AccountDto>>> GetAccounts()
         {
             var accounts = await _repository.GetAccounts()
+                                            .Include(a => a.User) // Ensure related User data is loaded
                                             .Where(account => account.User != null)
                                             .ToListAsync();
 
-            var requestDtos = accounts.Select(account => account.ToAccountDto())
+            var accountDtos = accounts.Select(account => account.ToAccountDto())
                                       .Where(dto => dto != null)
                                       .ToList();
 
-            return Ok(requestDtos);
+            return Ok(accountDtos);
         }
-
-
 
         // GET: api/Accounts/5
         [HttpGet("{AccountId}")]
-        public async Task<ActionResult<Account>> GetAccountById(int AccountId)
+        public async Task<ActionResult<AccountDto>> GetAccountById(int AccountId)
         {
             var account = await _repository.GetAccountByIdAsync(AccountId);
 
@@ -63,6 +62,7 @@ namespace Hahi.Controllers
                 return NotFound(new { message = ex.Message }); // Return NotFound if Account is null
             }
         }
+
 
         // PUT: api/Accounts/5
         [HttpPut("{id}")]

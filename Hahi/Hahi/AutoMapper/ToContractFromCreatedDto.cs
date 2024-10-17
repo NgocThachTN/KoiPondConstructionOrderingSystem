@@ -11,6 +11,7 @@ namespace Hahi.AutoMapper
         {
             return new ContractDto
             {
+                ContractId = contract.ContractId,
                 ContractName = contract.ContractName,
                 ContractStartDate = contract.ContractStartDate,
                 ContractEndDate = contract.ContractEndDate,
@@ -27,12 +28,14 @@ namespace Hahi.AutoMapper
         {
             return new RequestDto
             {
+                RequestId = request.RequestId,
                 RequestName = request.RequestName,
                 Description = request.Description,
                 Users = request.User != null ? new List<UserDto>
                 {
                     new UserDto
                     {
+                        UserId = request.User.UserId,
                         Name = request.User.Name,
                         PhoneNumber = request.User.PhoneNumber,
                         Address = request.User.Address,
@@ -48,6 +51,7 @@ namespace Hahi.AutoMapper
                     new DesignDtoV1
                     {
                         ConstructionTypeName = request.Design.ConstructionType?.ConstructionTypeName,
+                        DesignId = request.Design.DesignId,
                         DesignName = request.Design.DesignName,
                         DesignSize = request.Design.DesignSize,
                         DesignPrice = request.Design.DesignPrice,
@@ -60,6 +64,7 @@ namespace Hahi.AutoMapper
                     new SampleDtoV1
                     {
                         ConstructionTypeName = request.Sample.ConstructionType?.ConstructionTypeName,
+                        SampleId = request.Sample.SampleId,
                         SampleName = request.Sample.SampleName,
                         SampleSize = request.Sample.SampleSize,
                         SamplePrice = request.Sample.SamplePrice,
@@ -121,88 +126,86 @@ namespace Hahi.AutoMapper
         }
 
 
-        public static Contract ToContractDesignFromCreatedDto(this CreateContractDesignDto requestDto)
+        public static Contract ToContractDesignFromCreatedDto(this CreateContractDesignDto requestDto, Request existingRequest, User existingUser, Design existingDesign)
         {
             var contract = new Contract
             {
+                ContractId = requestDto.ContractId,
                 ContractName = requestDto.ContractName,
                 ContractStartDate = requestDto.ContractStartDate,
                 ContractEndDate = requestDto.ContractEndDate,
                 Description = requestDto.Description,
                 Status = requestDto.Status,
-                Request = requestDto.Requests != null && requestDto.Requests.Count > 0 ?
-                    new Request
+                Request = existingRequest ?? new Request
+                {
+                    RequestId = requestDto.Requests.First().RequestId,
+                    RequestName = requestDto.Requests.First().RequestName,
+                    Description = requestDto.Requests.First().Description,
+                    User = existingUser ?? new User
                     {
-                        RequestName = requestDto.Requests.First().RequestName,
-                        Description = requestDto.Requests.First().Description,
-                        User = requestDto.Requests.First().Users != null && requestDto.Requests.First().Users.Count > 0 ?
-                            new User
-                            {
-                                Name = requestDto.Requests.First().Users.First().Name,
-                                PhoneNumber = requestDto.Requests.First().Users.First().PhoneNumber,
-                                Address = requestDto.Requests.First().Users.First().Address,
-                                Account = new Account
-                                {
-                                    UserName = requestDto.Requests.First().Users.First().UserName,
-                                    Email = requestDto.Requests.First().Users.First().Email,
-                                    Password = requestDto.Requests.First().Users.First().Password
-                                },
-                                RoleId = requestDto.Requests.First().Users.First().RoleId
-                            } : null,
-
-                        Design = requestDto.Requests.First().Designs != null && requestDto.Requests.First().Designs.Count > 0 ?
-                            new Design
-                            {
-                                DesignName = requestDto.Requests.First().Designs.First().DesignName,
-                                DesignSize = requestDto.Requests.First().Designs.First().DesignSize,
-                                DesignPrice = requestDto.Requests.First().Designs.First().DesignPrice,
-                                DesignImage = requestDto.Requests.First().Designs.First().DesignImage
-                            } : null
-                    } : null
+                        UserId = requestDto.Requests.First().Users.First().UserId,
+                        Name = requestDto.Requests.First().Users.First().Name,
+                        PhoneNumber = requestDto.Requests.First().Users.First().PhoneNumber,
+                        Address = requestDto.Requests.First().Users.First().Address,
+                        Account = new Account
+                        {
+                            UserName = requestDto.Requests.First().Users.First().UserName,
+                            Email = requestDto.Requests.First().Users.First().Email,
+                            Password = requestDto.Requests.First().Users.First().Password
+                        },
+                        RoleId = requestDto.Requests.First().Users.First().RoleId
+                    },
+                    Design = existingDesign ?? new Design
+                    {
+                        DesignId = requestDto.Requests.First().Designs.First().DesignId,
+                        DesignName = requestDto.Requests.First().Designs.First().DesignName,
+                        DesignSize = requestDto.Requests.First().Designs.First().DesignSize,
+                        DesignPrice = requestDto.Requests.First().Designs.First().DesignPrice,
+                        DesignImage = requestDto.Requests.First().Designs.First().DesignImage
+                    }
+                }
             };
 
             return contract;
         }
 
 
-        public static Contract ToContractSampleFromCreatedDto(this CreateContractSampleDto requestDto)
+
+        public static Contract ToContractSampleFromCreatedDto(this CreateContractSampleDto requestDto, Request existingRequest, User existingUser, Sample existingSample)
         {
             var contract = new Contract
             {
+                ContractId = requestDto.ContractId,
                 ContractName = requestDto.ContractName,
                 ContractStartDate = requestDto.ContractStartDate,
                 ContractEndDate = requestDto.ContractEndDate,
                 Description = requestDto.Description,
                 Status = requestDto.Status,
-                Request = requestDto.Requests != null && requestDto.Requests.Count > 0 ?
-                    new Request
+                Request = existingRequest ?? new Request
+                {
+                    RequestName = requestDto.Requests.First().RequestName,
+                    Description = requestDto.Requests.First().Description,
+                    User = existingUser ?? new User
                     {
-                        RequestName = requestDto.Requests.First().RequestName,
-                        Description = requestDto.Requests.First().Description,
-                        User = requestDto.Requests.First().Users != null && requestDto.Requests.First().Users.Count > 0 ?
-                            new User
-                            {
-                                Name = requestDto.Requests.First().Users.First().Name,
-                                PhoneNumber = requestDto.Requests.First().Users.First().PhoneNumber,
-                                Address = requestDto.Requests.First().Users.First().Address,
-                                Account = new Account
-                                {
-                                    UserName = requestDto.Requests.First().Users.First().UserName,
-                                    Email = requestDto.Requests.First().Users.First().Email,
-                                    Password = requestDto.Requests.First().Users.First().Password
-                                },
-                                RoleId = requestDto.Requests.First().Users.First().RoleId
-                            } : null,
-
-                        Sample = requestDto.Requests.First().Samples != null && requestDto.Requests.First().Samples.Count > 0 ?
-                            new Sample
-                            {
-                                SampleName = requestDto.Requests.First().Samples.First().SampleName,
-                                SampleSize = requestDto.Requests.First().Samples.First().SampleSize,
-                                SamplePrice = requestDto.Requests.First().Samples.First().SamplePrice,
-                                SampleImage = requestDto.Requests.First().Samples.First().SampleImage
-                            } : null
-                    } : null
+                        Name = requestDto.Requests.First().Users.First().Name,
+                        PhoneNumber = requestDto.Requests.First().Users.First().PhoneNumber,
+                        Address = requestDto.Requests.First().Users.First().Address,
+                        Account = new Account
+                        {
+                            UserName = requestDto.Requests.First().Users.First().UserName,
+                            Email = requestDto.Requests.First().Users.First().Email,
+                            Password = requestDto.Requests.First().Users.First().Password
+                        },
+                        RoleId = requestDto.Requests.First().Users.First().RoleId
+                    },
+                    Sample = existingSample ?? new Sample
+                    {
+                        SampleName = requestDto.Requests.First().Samples.First().SampleName,
+                        SampleSize = requestDto.Requests.First().Samples.First().SampleSize,
+                        SamplePrice = requestDto.Requests.First().Samples.First().SamplePrice,
+                        SampleImage = requestDto.Requests.First().Samples.First().SampleImage
+                    }
+                }
             };
 
             return contract;
