@@ -1,6 +1,7 @@
 ﻿
 using KoiPond.DTOs;
 using KoiPond.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace KoiPond.AutoMapper
 {
@@ -10,12 +11,14 @@ namespace KoiPond.AutoMapper
         {
             return new RequestDto
             {
+                RequestId = request.RequestId,
                 RequestName = request.RequestName,
                 Description = request.Description,
                 Users = request.User != null ? new List<UserDto>
                 {
                     new UserDto
                     {
+                        UserId = request.User.UserId,
                         Name = request.User.Name,
                         PhoneNumber = request.User.PhoneNumber,
                         Address = request.User.Address,
@@ -30,7 +33,6 @@ namespace KoiPond.AutoMapper
                 {
                     new DesignDtoV1
                     {
-                        ConstructionTypeName = request.Design.ConstructionType?.ConstructionTypeName,
                         DesignName = request.Design.DesignName,
                         DesignSize = request.Design.DesignSize,
                         DesignPrice = request.Design.DesignPrice,
@@ -42,7 +44,6 @@ namespace KoiPond.AutoMapper
                 {
                     new SampleDtoV1
                     {
-                        ConstructionTypeName = request.Sample.ConstructionType?.ConstructionTypeName,
                         SampleName = request.Sample.SampleName,
                         SampleSize = request.Sample.SampleSize,
                         SamplePrice = request.Sample.SamplePrice,
@@ -51,63 +52,132 @@ namespace KoiPond.AutoMapper
                 } : new List<SampleDtoV1>()
             };
         }
-    
 
 
 
-
-
-// Mapping CreateRequestDto to Request for saving to the database
-        public static Request ToRequestDesignFromCreatedDto(this CreateRequestDesignDto requestDto)
+        // Mapping CreateRequestDto to Request for saving to the database
+        public static async Task<(Request request, string errorMessage)> ToRequestDesignFromCreatedDto(this CreateRequestDesignDto requestDto, KoiContext _context)
         {
-            var request = new Request
+            // Check if the RequestName already exists in the database
+            var existingRequestByName = await _context.Requests
+                .FirstOrDefaultAsync(r => r.RequestName == requestDto.RequestName);
+
+            // If the RequestName does not exist in the database, return an error message
+            if (existingRequestByName == null)
+            {
+                return (null, $"RequestName '{requestDto.RequestName}' does not match any existing request records in the database.");
+            }
+            // Check if the Request already exists
+            var existingRequest = await _context.Requests
+                .Include(r => r.User)
+                .Include(r => r.Design)
+                .FirstOrDefaultAsync(r => r.RequestId == requestDto.RequestId);
+
+            // If the request exists, use it; otherwise, create a new one
+            var request = existingRequest ?? new Request
             {
                 RequestName = requestDto.RequestName,
-                Description = requestDto.Description,
+                Description = requestDto.Description
+            };
 
-                // Assign User from requestDto
-                User = new User
+            // Check if the User already exists
+            var existingUser = await _context.Users
+                .Include(u => u.Account)
+                .FirstOrDefaultAsync(u => u.Name == requestDto.User.Name &&
+                                          u.PhoneNumber == requestDto.User.PhoneNumber &&
+                                          u.Account.Email == requestDto.User.Email &&
+                                          u.Address == requestDto.User.Address);
+
+            // If the user does not exist in the database and the request requires a valid user, return an error message
+            if (existingUser == null)
+            {
+                return (null, "User data provided does not match any existing user records in the database.");
+            }
+
+            // If the user exists, use it; otherwise, create a new one
+            request.User = existingUser ?? new User
+            {
+                Name = requestDto.User.Name,
+                PhoneNumber = requestDto.User.PhoneNumber,
+                Address = requestDto.User.Address,
+                Account = new Account
                 {
-                    Name = requestDto.User.Name,
-                    PhoneNumber = requestDto.User.PhoneNumber,
-                    Address = requestDto.User.Address,
-                    Account = new Account
-                    {
-                        UserName = requestDto.User.UserName,
-                        Email = requestDto.User.Email,
-                        Password = requestDto.User.Password
-                    },
-                    RoleId = requestDto.User.RoleId, // Assuming RoleId is provided in UserDto
-
-                    // Create and assign the Account to User
+                    UserName = requestDto.User.UserName,
+                    Email = requestDto.User.Email,
+                    Password = requestDto.User.Password
                 },
+                RoleId = requestDto.User.RoleId
+            };
 
-                // Assign Design or Sample based on selection
-                Design = requestDto.IsDesignSelected ? requestDto.Design != null ? new Design
+            // Check if the Design already exists
+            if (requestDto.IsDesignSelected && requestDto.Design != null)
+            {
+                var existingDesign = await _context.Designs
+                    .FirstOrDefaultAsync(d => d.DesignName == requestDto.Design.DesignName &&
+                                              d.DesignSize == requestDto.Design.DesignSize);
+
+                // If the design does not exist in the database and the request requires a valid design, return an error message
+                if (existingDesign == null)
                 {
-                    ConstructionType = new ConstructionType
-                    {
-                        ConstructionTypeName = requestDto.Design.ConstructionTypeName
-                    },
+                    return (null, "Design data provided does not match any existing design records in the database.");
+                }
+
+                // If the design exists, use it; otherwise, create a new one
+                request.Design = existingDesign ?? new Design
+                {
                     DesignName = requestDto.Design.DesignName,
                     DesignSize = requestDto.Design.DesignSize,
                     DesignPrice = requestDto.Design.DesignPrice,
-                    DesignImage = requestDto.Design.DesignImage
-                } : null : null,
-            };
+                    DesignImage = requestDto.Design.DesignImage,
+                };
+            }
 
-            return request;
+            return (request, null); // Return the request object if all validations pass
         }
 
-        public static Request ToRequestSampleFromCreatedDto(this CreateRequestSampleDto requestDto)
+
+        // Mapping CreateRequestSampleDto to Request for saving to the database with error handling
+        public static async Task<(Request request, string errorMessage)> ToRequestSampleFromCreatedDtoAsync(this CreateRequestSampleDto requestDto, KoiContext context)
         {
+            // Check if the RequestName already exists in the database
+            var existingRequestByName = await context.Requests
+                .FirstOrDefaultAsync(r => r.RequestName == requestDto.RequestName);
+
+            // If the RequestName does not exist in the database, return an error message
+            if (existingRequestByName == null)
+            {
+                return (null, $"RequestName '{requestDto.RequestName}' does not match any existing request records in the database.");
+            }
+
+            // Check if the User already exists
+            var existingUser = await context.Users
+                .Include(u => u.Account)
+                .FirstOrDefaultAsync(u => u.Name == requestDto.User.Name &&
+                                          u.PhoneNumber == requestDto.User.PhoneNumber &&
+                                          u.Account.Email == requestDto.User.Email &&
+                                          u.Address == requestDto.User.Address);
+
+            if (existingUser == null)
+            {
+                return (null, "User data provided does not match any existing user records in the database.");
+            }
+
+            // Check if the Sample already exists
+            var existingSample = await context.Samples
+                .FirstOrDefaultAsync(s => s.SampleName == requestDto.Sample.SampleName &&
+                                          s.SampleSize == requestDto.Sample.SampleSize);
+
+            if (requestDto.IsSampleSelected && existingSample == null)
+            {
+                return (null, "Sample data provided does not match any existing sample records in the database.");
+            }
+
+            // Create a new Request object with the existing or new data
             var request = new Request
             {
                 RequestName = requestDto.RequestName,
                 Description = requestDto.Description,
-
-                // Assign User from requestDto
-                User = new User
+                User = existingUser ?? new User
                 {
                     Name = requestDto.User.Name,
                     PhoneNumber = requestDto.User.PhoneNumber,
@@ -118,28 +188,18 @@ namespace KoiPond.AutoMapper
                         Email = requestDto.User.Email,
                         Password = requestDto.User.Password
                     },
-                    RoleId = requestDto.User.RoleId, // Assuming RoleId is provided in UserDto
-
-                    // Create and assign the Account to User
+                    RoleId = requestDto.User.RoleId,
                 },
-
-                // Assign Design or Sample based on selection
-                Sample = requestDto.IsSampleSelected ? requestDto.Sample != null ? new Sample
+                Sample = requestDto.IsSampleSelected ? existingSample ?? new Sample
                 {
-                    ConstructionType = new ConstructionType
-                    {
-                        ConstructionTypeName = requestDto.Sample.ConstructionTypeName
-                    },
                     SampleName = requestDto.Sample.SampleName,
                     SampleSize = requestDto.Sample.SampleSize,
                     SamplePrice = requestDto.Sample.SamplePrice,
                     SampleImage = requestDto.Sample.SampleImage
-                } : null : null,
+                } : null,
             };
 
-            return request;
+            return (request, null); // Return the request object if all validations pass
         }
-
     }
 }
-

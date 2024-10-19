@@ -10,7 +10,6 @@ namespace KoiPond.AutoMapper
         {
             return new SampleDtoV1
             {
-                ConstructionTypeName = sample.ConstructionType?.ConstructionTypeName,
                 SampleName = sample.SampleName,
                 SampleSize = sample.SampleSize,
                 SamplePrice = sample.SamplePrice,

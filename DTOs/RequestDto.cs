@@ -8,6 +8,7 @@ namespace KoiPond.DTOs
         public List<DesignDtoV1> Designs { get; set; }
 
         public List<SampleDtoV1> Samples { get; set; }
+        public int RequestId { get; set; }
         public string? RequestName { get; set; }
         public string? Description { get; set; }
     }

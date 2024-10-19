@@ -51,7 +51,6 @@ namespace KoiPond.AutoMapper
                 {
                     new DesignDtoV1
                     {
-                        ConstructionTypeName = request.Design.ConstructionType?.ConstructionTypeName,
                         DesignName = request.Design.DesignName,
                         DesignSize = request.Design.DesignSize,
                         DesignPrice = request.Design.DesignPrice,
@@ -63,7 +62,6 @@ namespace KoiPond.AutoMapper
                 {
                     new SampleDtoV1
                     {
-                        ConstructionTypeName = request.Sample.ConstructionType?.ConstructionTypeName,
                         SampleName = request.Sample.SampleName,
                         SampleSize = request.Sample.SampleSize,
                         SamplePrice = request.Sample.SamplePrice,
